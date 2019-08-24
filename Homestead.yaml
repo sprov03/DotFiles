@@ -1,0 +1,56 @@
+---
+ip: "192.168.10.10"
+memory: 2048
+cpus: 2
+provider: virtualbox
+
+authorize: ~/.ssh/id_rsa.pub
+
+keys:
+    - ~/.ssh/id_rsa
+
+folders:
+    - map: ~/Development/Sites/app.flippilot
+      to: /var/www/app.flippilot
+    - map: ~/Development/Sites/api.flippilot
+      to: /var/www/api.flippilot
+    - map: ~/Development/Sites/app.akceli
+      to: /var/www/app.akceli
+    - map: ~/Development/Sites/api.akceli
+      to: /var/www/api.akceli
+    - map: ~/Development/Sites/akceli
+      to: /var/www/akceli
+    - map: ~/Development/ComposerPackages
+      to: /var/www/ComposerPackages
+    - map: ~/dot-files
+      to: /var/vagrant/dot-files
+
+sites:
+    - map: app.flippilot.local
+      to: /var/www/app.flippilot/public
+    - map: api.flippilot.local
+      to: /var/www/api.flippilot/public
+    - map: app.akceli.local
+      to: /var/www/app.akceli/public
+    - map: api.akceli.local
+      to: /var/www/api.akceli/public
+    - map: akceli.local
+      to: /var/www/akceli/public
+
+databases:
+    - flippilot
+    - akceli-old
+    - akceli
+
+features:
+    - mariadb: false
+    - ohmyzsh: false
+    - webdriver: false
+    - mysql8: true
+
+# ports:
+#     - send: 50000
+#       to: 5000
+#     - send: 7777
+#       to: 777
+#       protocol: udp
