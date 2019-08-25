@@ -1,0 +1,41 @@
+# Npm 
+alias serve='npm run serve'
+
+# Git Aliases
+alias gs='git status -sb'
+alias pull='git pull'
+alias push='git push'
+alias commit='git add -A; git commit -am "'
+alias log="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+alias gitclear='git add -A; git stash'
+
+alias fetch='git fetch'
+alias master='git checkout master; fetch; pull'
+alias alpha='git checkout r-alpha; fetch; pull'
+alias beta='git checkout r-beta; fetch; pull'
+
+function pushup() {
+	branch=$(git branch | sed -n -e 's/^\* \(.*\)/\1/p')
+	git push --set-upstream origin $branch
+}
+function mergeMaster() {
+	branch=$(git branch | sed -n -e 's/^\* \(.*\)/\1/p')
+	echo $branch
+	master
+	git checkout $branch
+	git merge master
+}
+function mergeAlpha() {
+	branch=$(git branch | sed -n -e 's/^\* \(.*\)/\1/p')
+	echo $branch
+	alpha
+	git checkout $branch
+	git merge r-alpha
+}
+function mergeBeta() {
+	branch=$(git branch | sed -n -e 's/^\* \(.*\)/\1/p')
+	echo $branch
+	beta
+	git checkout $branch
+	git merge r-beta
+}

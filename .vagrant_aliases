@@ -1,4 +1,8 @@
-alias newalias='vim ~/dot-files/.vagrant_aliases; source ~/.bashrc'
+alias newalias='vim /var/vagrant/dot-files/.vagrant_aliases; source ~/.bashrc'
+
+if [ -f ~/.shared_aliases ]; then
+    . ~/.shared_aliases
+fi
 
 # Git Aliases
 alias gs='git status -sb'
@@ -11,7 +15,10 @@ alias cleanlocal='git branch | grep -v "master" | grep -v "r-beta" | xargs git b
 
 alias fetch='git fetch'
 alias sites='cd /var/www'
-alias apiFlippilot='sites; cd api.flippilot'
+
+# Sites
+alias akceli='cd /var/www/akceli'
+alias flippilot='sites; cd api.flippilot'
 
 # Git Branches
 alias master='git checkout master; fetch; pull'

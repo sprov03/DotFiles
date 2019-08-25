@@ -1,14 +1,18 @@
 alias newalias='vim ~/.bash_aliases; source ~/.bashrc'
 alias showalias="cat ~/.bash_aliases"
 
+if [ -f ~/.shared_aliases ]; then
+    . ~/.shared_aliases
+fi
+
 # Export Paths
-#export PATH="$PATH:/home/shawn/Development/VagrantBoxes/homestead"
-export PATH="$PATH:/home/shawn/Development/VagrantBoxes/homestedNew"
-export PATH="$PATH:/home/shawn/Development/Editors/DataGrip-2019.1.4/bin"
+#export PATH="$PATH:/home/oem/Development/VagrantBoxes/homestead"
+#export PATH="$PATH:/home/oem/Development/VagrantBoxes/Homestead"
+#export PATH="$PATH:/home/oem/Development/Editors/DataGrip-2019.1.4/bin"
 
 # Important Directories
-#alias homestead='cd /home/shawn/Development/VagrantBoxes/homestead'
-alias homestead='cd /home/shawn/Development/VagrantBoxes/homestedNew'
+#alias homestead='cd /home/oem/Development/VagrantBoxes/homestead'
+alias homestead='cd /home/oem/Development/VirtualBoxes/Homestead'
 alias development='cd ~/Development'
 alias sites='cd ~/Development/Sites'
 alias dotfiles='cd ~/dot-files'
@@ -60,7 +64,7 @@ function mergeBeta() {
 
 
 #Ngrok Aliases
-alias ngrok='/home/shawn/Development/Tools/ngrok'
+alias ngrok='/home/oem/Development/Tools/ngrok'
 alias ngrokAkceli='ngrok http 192.168.10.10:80 -host-header=rapid-code-gen.local -subdomain=akceli'
 alias ngrokAkceli='ngrok http 192.168.10.10:80 -host-header=akceli.local -subdomain=akceli'
 alias ngrokFlipPiolotLocal='ngrok http 192.168.10.10:80 -host-header=api.flippilot.local -subdomain=flippilot'
