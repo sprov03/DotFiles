@@ -1,21 +1,19 @@
 alias newalias='vim ~/.bash_aliases; source ~/.bashrc'
+alias newsharedalias='vim ~/.shared_aliases; source ~/.bashrc'
 alias showalias="cat ~/.bash_aliases"
 
 if [ -f ~/.shared_aliases ]; then
     . ~/.shared_aliases
 fi
 
-# Export Paths
-#export PATH="$PATH:/home/oem/Development/VagrantBoxes/homestead"
-#export PATH="$PATH:/home/oem/Development/VagrantBoxes/Homestead"
-#export PATH="$PATH:/home/oem/Development/Editors/DataGrip-2019.1.4/bin"
-
 # Important Directories
-#alias homestead='cd /home/oem/Development/VagrantBoxes/homestead'
-alias homestead='cd /home/oem/Development/VirtualBoxes/Homestead'
 alias development='cd ~/Development'
-alias sites='cd ~/Development/Sites'
+alias homestead='cd ~/Development/VirtualBoxes/Homestead'
 alias dotfiles='cd ~/dot-files'
+alias sites='cd ~/Development/Sites'
+alias akceli='cd ~/Development/Sites/akceli'
+alias api.flippilot='cd ~/Development/Sites/api.flippilot'
+alias app.flippilot='cd ~/Development/Sites/app.flippilot'
 
 # Vagrant Aliases
 alias vreprovision='homestead; vagrant reload --provision'
@@ -23,56 +21,8 @@ alias vup='homestead; vagrant up; vagrant ssh'
 alias vshh='vagrant ssh'
 alias vhalt='vagrant halt'
 
-# Git Aliases
-alias gs='git status -sb'
-alias pull='git pull'
-alias push='git push'
-alias commit='git add -A; git commit -am "'
-alias log="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
-alias gitclear='git add -A; git stash'
-
-alias fetch='git fetch'
-alias master='git checkout master; fetch; pull'
-alias alpha='git checkout r-alpha; fetch; pull'
-alias beta='git checkout r-beta; fetch; pull'
-
-function pushup() {
-	branch=$(git branch | sed -n -e 's/^\* \(.*\)/\1/p')
-	git push --set-upstream origin $branch
-}
-function mergeMaster() {
-	branch=$(git branch | sed -n -e 's/^\* \(.*\)/\1/p')
-	echo $branch
-	master
-	git checkout $branch
-	git merge master
-}
-function mergeAlpha() {
-	branch=$(git branch | sed -n -e 's/^\* \(.*\)/\1/p')
-	echo $branch
-	alpha
-	git checkout $branch
-	git merge r-alpha
-}
-function mergeBeta() {
-	branch=$(git branch | sed -n -e 's/^\* \(.*\)/\1/p')
-	echo $branch
-	beta
-	git checkout $branch
-	git merge r-beta
-}
-
-
 #Ngrok Aliases
-alias ngrok='/home/oem/Development/Tools/ngrok'
+alias ngrok='/home/shawn/Development/Tools/ngrok'
 alias ngrokAkceli='ngrok http 192.168.10.10:80 -host-header=rapid-code-gen.local -subdomain=akceli'
 alias ngrokAkceli='ngrok http 192.168.10.10:80 -host-header=akceli.local -subdomain=akceli'
 alias ngrokFlipPiolotLocal='ngrok http 192.168.10.10:80 -host-header=api.flippilot.local -subdomain=flippilot'
-
-# Laravel Aliases
-function makeMigration() {
-	php artisan make:migration ${1}_migration --create=$1
-}
-
-# Npm 
-alias serve='npm run serve'
