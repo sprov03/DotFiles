@@ -12,10 +12,28 @@ alias sites='cd /var/www'
 alias akceli='cd /var/www/akceli'
 alias flippilot='sites; cd api.flippilot'
 
+# Scaffold Generation Commands
+alias genmodel='php artisan gen:full --template-set=model-only'
+alias genapi='php artisan gen:templates --template-set=api-crud-controller-only'
+alias genresource='php artisan gen:templates --template-set=resource-only'
+alias genenum='php artisan gen:templates --template-set=enum-model'
+alias genfull='php artisan gen:full'
+alias gendocs='php artisan apidoc:generate'
+
 # Laravel Aliases
 alias dump='composer dump-autoload'
-alias migrate='php artisan migreate --seed'
+alias rollback='php artisan migrate:rollback'
+alias migrate='php artisan migrate'
+
+alias fresh='php artisan migrate:fresh --seed'
+alias refresh='dump; fresh'
+
 function makeMigration() {
         php artisan make:migration ${1}_migration --create=$1
+}
+
+alias routes='php artisan route:list'
+function route() {
+	php artisan route:list | grep $1
 }
 
