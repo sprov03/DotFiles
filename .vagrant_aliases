@@ -10,7 +10,8 @@ alias sites='cd /var/www'
 
 # Sites
 alias akceli='cd /var/www/akceli'
-alias flippilot='sites; cd api.flippilot'
+alias api.flippilot='sites; cd api.flippilot'
+alias app.flippilot='sites; cd app.flippilot'
 
 # Scaffold Generation Commands
 alias genmodel='php artisan gen:full --template-set=model-only'
