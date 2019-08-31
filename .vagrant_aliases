@@ -7,6 +7,7 @@ fi
 
 # Important Directories
 alias sites='cd /var/www'
+alias dotfiles='cd /var/vagrant/dot-files'
 
 # Sites
 alias akceli='cd /var/www/akceli'
