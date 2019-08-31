@@ -43,6 +43,8 @@ function mergeBeta() {
 function savedotfiles() {
 	CWD=$(pwd)
 	echo $CWD
-	homestead
+	dotfiles
+	commit saving changes to dot-files"
+	push
 	cd $CWD
 }
