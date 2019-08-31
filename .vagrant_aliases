@@ -22,14 +22,15 @@ alias genfull='php artisan gen:full'
 alias gendocs='php artisan apidoc:generate'
 
 # Laravel Aliases
-alias dump='composer dump-autoload'
+alias dump='php artisan cache:clear; composer dump-autoload'
 alias rollback='php artisan migrate:rollback'
 alias migrate='php artisan migrate'
+alias seed='php artisan migrate --seed'
 
 alias fresh='php artisan migrate:fresh --seed'
 alias refresh='dump; fresh'
 
-function makeMigration() {
+function genmigration() {
         php artisan make:migration ${1}_migration --create=$1
 }
 

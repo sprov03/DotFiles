@@ -39,3 +39,10 @@ function mergeBeta() {
 	git checkout $branch
 	git merge r-beta
 }
+
+function savedotfiles() {
+	CWD=$(pwd)
+	echo $CWD
+	homestead
+	cd $CWD
+}
