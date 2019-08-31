@@ -42,7 +42,6 @@ function mergeBeta() {
 
 function savedotfiles() {
 	CWD=$(pwd)
-	echo $CWD
 	dotfiles
 	commit saving changes to dot-files"
 	push
