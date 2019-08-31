@@ -40,8 +40,6 @@ function mergeBeta() {
 	git merge r-beta
 }
 
-alias testingdots='savedotfiles > /dev/null'
-
 function savedotfiles() {
 	CWD=$(pwd)
 	echo $CWD
