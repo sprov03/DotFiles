@@ -22,7 +22,7 @@ alias vshh='homestead; vagrant ssh'
 alias vhalt='homestead; vagrant halt'
 
 #Ngrok Aliases
-alias ngrok='~/Development/Tools/.ngrok'
+alias ngrok='~/Development/Tools/ngrok'
 alias ngrokAkceli='ngrok http 192.168.10.10:80 -host-header=rapid-code-gen.local -subdomain=akceli'
 alias ngrokAkceli='ngrok http 192.168.10.10:80 -host-header=akceli.local -subdomain=akceli'
 alias ngrokFlipPiolotLocal='ngrok http 192.168.10.10:80 -host-header=api.flippilot.local -subdomain=flippilot'
