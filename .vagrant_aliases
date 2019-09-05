@@ -37,6 +37,6 @@ function genmigration() {
 
 alias routes='php artisan route:list'
 function route() {
-	php artisan route:list | grep $1 | grep $2
+	php artisan route:list | grep $1
 }
 
