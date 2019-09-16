@@ -27,6 +27,7 @@ alias dump='php artisan cache:clear; composer dump-autoload'
 alias rollback='php artisan migrate:rollback'
 alias migrate='php artisan migrate'
 alias seed='php artisan migrate --seed'
+alias queue='php artisan queue:listen'
 
 alias fresh='php artisan migrate:fresh --seed'
 alias refresh='dump; fresh'
