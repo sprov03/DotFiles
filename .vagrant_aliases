@@ -28,6 +28,7 @@ alias rollback='php artisan migrate:rollback'
 alias migrate='php artisan migrate'
 alias seed='php artisan migrate --seed'
 alias queue='php artisan queue:listen'
+alias jobs='queue'
 
 alias fresh='php artisan migrate:fresh --seed'
 alias refresh='dump; fresh'
