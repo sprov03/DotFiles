@@ -39,6 +39,12 @@ function mergeBeta() {
 	git checkout $branch
 	git merge r-beta
 }
+function mergetest() {
+	branch=$(git branch | sed -n -e 's/^\* \(.*\)/\1/p')
+	echo $branch
+	echo $1
+	echo {$1}
+}
 function merge() {
 	branch=$(git branch | sed -n -e 's/^\* \(.*\)/\1/p')
 	git checkout {$1}
