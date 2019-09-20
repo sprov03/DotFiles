@@ -39,6 +39,14 @@ function mergeBeta() {
 	git checkout $branch
 	git merge r-beta
 }
+function merge() {
+	branch=$(git branch | sed -n -e 's/^\* \(.*\)/\1/p')
+	git checkout {$1}
+	git fetch
+	git pull
+	git checkout $branch
+	git merge {$1}
+}
 
 function savedotfiles() {
 	CWD=$(pwd)
