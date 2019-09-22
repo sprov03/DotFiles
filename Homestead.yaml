@@ -16,6 +16,8 @@ folders:
       to: /var/www/api.flippilot
     - map: ~/Development/Sites/app.akceli
       to: /var/www/app.akceli
+    - map: ~/Development/Sites/app.akceli-new
+      to: /var/www/app.akceli-new
     - map: ~/Development/Sites/api.akceli
       to: /var/www/api.akceli
     - map: ~/Development/Sites/akceli
@@ -32,6 +34,8 @@ sites:
       to: /var/www/api.flippilot/public
     - map: app.akceli.local
       to: /var/www/app.akceli/public
+    - map: app.akceli-new.local
+      to: /var/www/app.akceli-new/public
     - map: api.akceli.local
       to: /var/www/api.akceli/public
     - map: akceli.local
@@ -41,6 +45,7 @@ databases:
     - flippilot
     - akceli-old
     - akceli
+    - akceli-new
 
 features:
     - mariadb: false

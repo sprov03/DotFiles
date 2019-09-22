@@ -11,6 +11,7 @@ alias dotfiles='cd /var/vagrant/dot-files'
 
 # Sites
 alias akceli='cd /var/www/akceli'
+alias akcelinew='cd /var/www/akceli-new'
 alias api.flippilot='sites; cd api.flippilot'
 alias app.flippilot='sites; cd app.flippilot'
 
