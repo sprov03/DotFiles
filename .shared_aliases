@@ -58,6 +58,7 @@ function pulldown() {
 	git checkout $1
 	branch=$(git branch | sed -n -e 's/^\* \(.*\)/\1/p')
 	git checkout -b ${branch}-shawn
+	mergeMaster
 }
 
 function savedotfiles() {
