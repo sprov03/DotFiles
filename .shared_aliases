@@ -10,7 +10,7 @@ alias log="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset 
 alias gitclear='git add -A; git stash'
 
 alias fetch='git fetch'
-alias master='git checkout master; fetch; pull'
+alias master='git checkout master; fetch; pull; migrate'
 alias alpha='git checkout r-alpha; fetch; pull'
 alias beta='git checkout r-beta; fetch; pull'
 
