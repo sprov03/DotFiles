@@ -10,6 +10,8 @@ keys:
     - ~/.ssh/id_rsa
 
 folders:
+    - map: ~/Development/Sites
+      to: /var/www
     - map: ~/Development/Sites/app.flippilot
       to: /var/www/app.flippilot
     - map: ~/Development/Sites/api.flippilot
@@ -32,14 +34,10 @@ sites:
       to: /var/www/app.flippilot/public
     - map: api.flippilot.local
       to: /var/www/api.flippilot/public
-    - map: app.akceli.local
-      to: /var/www/app.akceli/public
-    - map: app.akceli-new.local
-      to: /var/www/app.akceli-new/public
-    - map: api.akceli.local
-      to: /var/www/api.akceli/public
     - map: akceli.local
       to: /var/www/akceli/public
+    - map: akceli-new.local
+      to: /var/www/akceli-new/public
 
 databases:
     - flippilot
