@@ -10,8 +10,8 @@ alias sites='cd /var/www'
 alias dotfiles='cd /var/vagrant/dot-files'
 
 # Sites
-alias akceli='cd /var/www/akceli'
-alias akcelinew='cd /var/www/akceli-new'
+alias akceliold='cd /var/www/akceli'
+alias akceli='cd /var/www/akceli-new'
 alias api.flippilot='sites; cd api.flippilot; jobs'
 alias app.flippilot='sites; cd app.flippilot'
 
