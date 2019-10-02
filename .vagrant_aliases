@@ -12,7 +12,7 @@ alias dotfiles='cd /var/vagrant/dot-files'
 # Sites
 alias akceliold='cd /var/www/akceli'
 alias akceli='cd /var/www/akceli-new'
-alias api.flippilot='sites; cd api.flippilot; jobs'
+alias api.flippilot='sites; cd api.flippilot; pwd; jobs'
 alias app.flippilot='sites; cd app.flippilot'
 
 # Scaffold Generation Commands
