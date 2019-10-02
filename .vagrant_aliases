@@ -29,7 +29,7 @@ alias rollback='php artisan migrate:rollback'
 alias migrate='php artisan migrate'
 alias cycle='migrate; rollback; migrate'
 alias seed='php artisan migrate --seed'
-alias queue='echo "Running Jobs Listener"; php artisan horizon'
+alias queue='php artisan horizon'
 alias jobs='queue'
 
 alias fresh='php artisan migrate:fresh --seed'
