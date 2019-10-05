@@ -35,7 +35,7 @@ sites:
     - map: api.flippilot.local
       to: /var/www/api.flippilot/public
     - map: akceli.local
-      to: /var/www/akceli/public
+      to: /var/www/akceli-new/public
     - map: akceli-new.local
       to: /var/www/akceli-new/public
 
