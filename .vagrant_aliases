@@ -29,7 +29,7 @@ alias rollback='php artisan migrate:rollback'
 alias migrate='php artisan migrate'
 alias cycle='migrate; rollback; migrate'
 alias seed='php artisan migrate --seed'
-alias queue='php artisan queue:listen --timeout=0'
+alias queue='php artisan queue:listen --timeout=120'
 alias jobs='horizon'
 alias horizon='php artisan horizon'
 
