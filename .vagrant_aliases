@@ -16,6 +16,7 @@ alias api.flippilot='sites; cd api.flippilot; pwd; jobs'
 alias app.flippilot='sites; cd app.flippilot'
 
 # Scaffold Generation Commands
+alias gen='php artisan akceli'
 alias genmodel='php artisan gen:full --template-set=model-only'
 alias genapi='php artisan gen:templates --template-set=api-crud-controller-only'
 alias genresource='php artisan gen:templates --template-set=resource-only'
