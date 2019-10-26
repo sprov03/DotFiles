@@ -12,6 +12,7 @@ alias homestead='cd ~/Development/VirtualBoxes/Homestead'
 alias dotfiles='cd ~/dot-files'
 alias sites='cd ~/Development/Sites'
 alias akceli='cd ~/Development/Sites/akceli'
+alias docs='cd ~/Development/Sites/akceli-docs'
 alias api.flippilot='cd ~/Development/Sites/api.flippilot'
 alias app.flippilot='cd ~/Development/Sites/app.flippilot'
 
