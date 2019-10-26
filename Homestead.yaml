@@ -12,18 +12,6 @@ keys:
 folders:
     - map: ~/Development/Sites
       to: /var/www
-    - map: ~/Development/Sites/app.flippilot
-      to: /var/www/app.flippilot
-    - map: ~/Development/Sites/api.flippilot
-      to: /var/www/api.flippilot
-    - map: ~/Development/Sites/app.akceli
-      to: /var/www/app.akceli
-    - map: ~/Development/Sites/app.akceli-new
-      to: /var/www/app.akceli-new
-    - map: ~/Development/Sites/api.akceli
-      to: /var/www/api.akceli
-    - map: ~/Development/Sites/akceli
-      to: /var/www/akceli
     - map: ~/Development/ComposerPackages
       to: /var/www/ComposerPackages
     - map: ~/dot-files
@@ -38,12 +26,15 @@ sites:
       to: /var/www/akceli-new/public
     - map: akceli-new.local
       to: /var/www/akceli-new/public
+    - map: demo.local
+      to: /var/www/trash-project/public
 
 databases:
     - flippilot
     - akceli-old
     - akceli
     - akceli-new
+    - demo
 
 features:
     - mariadb: false
