@@ -8,6 +8,9 @@ alias push='git push'
 alias commit='git add -A; git commit -am "'
 alias log="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 alias gitclear='git add -A; git stash'
+alias cleanorigin="git remote update origin --prune"
+alias cleanlocal='git branch | grep -v "master" | xargs git branch -D'
+alias cleangit='cleanorigin; cleanlocal'
 
 alias fetch='git fetch'
 alias master='git checkout master; fetch; pull; migrate'
