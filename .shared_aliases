@@ -14,6 +14,12 @@ alias master='git checkout master; fetch; pull; migrate'
 alias alpha='git checkout r-alpha; fetch; pull'
 alias beta='git checkout r-beta; fetch; pull'
 
+function gittrash() {
+	branch=$(git branch | sed -n -e 's/^\* \(.*\)/\1/p')
+	git checkout -b $1
+	git commit -am "trash"
+	git checkout $branch
+}
 function pushup() {
 	branch=$(git branch | sed -n -e 's/^\* \(.*\)/\1/p')
 	git push --set-upstream origin $branch
