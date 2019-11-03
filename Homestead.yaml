@@ -27,7 +27,7 @@ sites:
     - map: akceli-new.local
       to: /var/www/akceli-new/public
     - map: demo.local
-      to: /var/www/trash-project/public
+      to: /var/www/demo/public
 
 databases:
     - flippilot
