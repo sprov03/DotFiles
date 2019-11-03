@@ -17,7 +17,7 @@ alias beta='git checkout r-beta; fetch; pull'
 function gittrash() {
 	branch=$(git branch | sed -n -e 's/^\* \(.*\)/\1/p')
 	git checkout -b $1
-	git commit -am "trash"
+	commit trash"
 	git checkout $branch
 }
 function pushup() {
