@@ -25,7 +25,7 @@ alias genfull='php artisan gen:full'
 alias gendocs='php artisan apidoc:generate'
 
 # Laravel Aliases
-alias dump='php artisan cache:clear; composer dump-autoload'
+alias dump='php artisan cache:clear; composer clearcache; composer dump-autoload'
 alias rollback='php artisan migrate:rollback'
 alias migrate='php artisan migrate'
 alias cycle='migrate; rollback; migrate'
