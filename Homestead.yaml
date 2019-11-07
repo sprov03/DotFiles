@@ -12,6 +12,8 @@ keys:
 folders:
     - map: ~/Development/Sites
       to: /var/www
+    - map: ~/Development/ComposerPackages
+      to: /var/www/ComposerPackages
     - map: ~/dot-files
       to: /var/vagrant/dot-files
 
@@ -24,12 +26,15 @@ sites:
       to: /var/www/akceli-new/public
     - map: akceli-new.local
       to: /var/www/akceli-new/public
+    - map: demo.local
+      to: /var/www/demo/public
 
 databases:
     - flippilot
     - akceli-old
     - akceli
     - akceli-new
+    - demo
 
 features:
     - mariadb: false
