@@ -1,5 +1,5 @@
-alias newalias='vim /var/vagrant/dot-files/.vagrant_aliases; source ~/.bashrc; savedotfiles'
-alias newsharedalias='vim /var/vagrant/dot-files/.shared_aliases; source ~/.bashrc; savedotfiles'
+alias newalias='pulldotfiles; vim /var/vagrant/dot-files/.vagrant_aliases; source ~/.bashrc; savedotfiles'
+alias newsharedalias='pulldotfiles; vim /var/vagrant/dot-files/.shared_aliases; source ~/.bashrc; savedotfiles'
 
 if [ -f /var/vagrant/dot-files/.shared_aliases ]; then
     . /var/vagrant/dot-files/.shared_aliases
