@@ -1,5 +1,5 @@
-alias newalias='vim ~/.bash_aliases; source ~/.bashrc; savedotfiles>/dev/null'
-alias newsharedalias='vim ~/.shared_aliases; source ~/.bashrc; savedotfiles'
+alias newalias='pulldotfiles; vim ~/.bash_aliases; source ~/.bashrc; savedotfiles>/dev/null'
+alias newsharedalias='pulldotfiles; vim ~/.shared_aliases; source ~/.bashrc; savedotfiles>/dev/null'
 alias showalias="cat ~/.bash_aliases"
 
 if [ -f ~/.shared_aliases ]; then
