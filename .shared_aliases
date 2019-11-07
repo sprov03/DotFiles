@@ -59,6 +59,12 @@ function pulldown() {
 	gs
 }
 
+function pulldotfiles() {
+	CWD=$(pwd)
+	dotfiles
+	pull
+}
+
 function savedotfiles() {
 	CWD=$(pwd)
 	dotfiles
