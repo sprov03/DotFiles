@@ -26,6 +26,8 @@ sites:
       to: /var/www/akceli-new/public
     - map: akceli-new.local
       to: /var/www/akceli-new/public
+    - map: akceli.satis
+      to: /var/www/satis/public
     - map: demo.local
       to: /var/www/demo/public
 
