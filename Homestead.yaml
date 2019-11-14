@@ -30,6 +30,8 @@ sites:
       to: /var/www/satis/public
     - map: demo.local
       to: /var/www/demo/public
+    - map: graphql.demo
+      to: /var/www/graphql/public
 
 databases:
     - flippilot
@@ -37,6 +39,7 @@ databases:
     - akceli
     - akceli-new
     - demo
+    - graphql
 
 features:
     - mariadb: false

@@ -14,6 +14,7 @@ alias akceliold='cd /var/www/akceli'
 #alias akceli='gen'
 alias akceli='cd /var/www/akceli-new'
 alias demo='cd /var/www/demo'
+alias graphql='cd /var/www/graphql'
 alias api.flippilot='sites; cd api.flippilot; pwd; jobs'
 alias app.flippilot='sites; cd app.flippilot'
 
