@@ -32,6 +32,8 @@ sites:
       to: /var/www/demo/public
     - map: graphql.demo
       to: /var/www/graphql/public
+    - map: tailwind.demo 
+      to: /var/www/tailwind/public
 
 databases:
     - flippilot
@@ -40,6 +42,7 @@ databases:
     - akceli-new
     - demo
     - graphql
+    - tailwind
 
 features:
     - mariadb: false
