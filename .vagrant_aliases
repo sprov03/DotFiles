@@ -21,12 +21,8 @@ alias app.flippilot='sites; cd app.flippilot'
 
 # Scaffold Generation Commands
 alias gen='php artisan akceli:generate'
-alias genmodel='php artisan gen:full --template-set=model-only'
-alias genapi='php artisan gen:templates --template-set=api-crud-controller-only'
-alias genresource='php artisan gen:templates --template-set=resource-only'
-alias genenum='php artisan gen:templates --template-set=enum-model'
-alias genfull='php artisan gen:full'
-alias gendocs='php artisan apidoc:generate'
+alias genmodel='gen model'
+alias genbelongstomany='php artisan:relationships'
 
 # Laravel Aliases
 alias dump='composer clearcache; composer dump-autoload; php artisan cache:clear'
