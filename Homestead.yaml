@@ -34,6 +34,8 @@ sites:
       to: /var/www/graphql/public
     - map: tailwind.demo 
       to: /var/www/tailwind/public
+    - map: todolist.demo 
+      to: /var/www/todolist/public
 
 databases:
     - flippilot
@@ -43,6 +45,7 @@ databases:
     - demo
     - graphql
     - tailwind
+    - todolist
 
 features:
     - mariadb: false
