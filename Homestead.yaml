@@ -10,6 +10,8 @@ keys:
     - ~/.ssh/id_rsa
 
 folders:
+    - map: ~/Development/Infrastructure
+      to: /var/infrastructure
     - map: ~/Development/Sites
       to: /var/www
     - map: ~/Development/ComposerPackages
@@ -18,6 +20,8 @@ folders:
       to: /var/vagrant/dot-files
 
 sites:
+    - map: leadpropeller.local
+      to: /var/www/leadpropeller/public
     - map: app.flippilot.local
       to: /var/www/app.flippilot/public
     - map: api.flippilot.local
@@ -34,11 +38,14 @@ sites:
       to: /var/www/graphql/public
     - map: tailwind.demo 
       to: /var/www/tailwind/public
+    - map: git-task.local 
+      to: /var/www/git-task/public
     - map: todolist.demo 
       to: /var/www/todolist/public
 
 databases:
     - flippilot
+    - leadpropeller
     - akceli-old
     - akceli
     - akceli-new
@@ -46,6 +53,7 @@ databases:
     - graphql
     - tailwind
     - todolist
+    - git-task
 
 features:
     - mariadb: false
