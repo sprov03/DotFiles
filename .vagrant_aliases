@@ -13,21 +13,19 @@ alias dotfiles='cd /var/vagrant/dot-files'
 alias akceliold='cd /var/www/akceli'
 #alias akceli='gen'
 alias akceli='cd /var/www/akceli-new'
+alias leadpropeller='cd /var/www/leadpropeller'
 alias demo='cd /var/www/demo'
+alias tailwind='cd /var/www/tailwind'
+alias graphql='cd /var/www/graphql'
 alias api.flippilot='sites; cd api.flippilot; pwd; jobs'
 alias app.flippilot='sites; cd app.flippilot'
 
 # Scaffold Generation Commands
 alias gen='php artisan akceli:generate'
-alias genmodel='php artisan gen:full --template-set=model-only'
-alias genapi='php artisan gen:templates --template-set=api-crud-controller-only'
-alias genresource='php artisan gen:templates --template-set=resource-only'
-alias genenum='php artisan gen:templates --template-set=enum-model'
-alias genfull='php artisan gen:full'
-alias gendocs='php artisan apidoc:generate'
+alias genbelongstomany='php artisan akceli:relationships'
 
 # Laravel Aliases
-alias dump='php artisan cache:clear; composer clearcache; composer dump-autoload'
+alias dump='composer clearcache; composer dump-autoload; php artisan cache:clear'
 alias rollback='php artisan migrate:rollback'
 alias migrate='php artisan migrate'
 alias cycle='migrate; rollback; migrate'
@@ -38,6 +36,7 @@ alias horizon='php artisan horizon'
 
 alias fresh='php artisan migrate:fresh --seed'
 alias refresh='dump; fresh'
+alias updateakceli='composer remove akceli/laravel-code-generator; composer require akceli/laravel-code-generator dev-master'
 
 function genmigration() {
         php artisan make:migration ${1}_migration --create=$1
