@@ -25,7 +25,7 @@ alias gen='php artisan akceli:generate'
 alias genbelongstomany='php artisan akceli:relationships'
 
 # Laravel Aliases
-alias dump='composer clearcache; composer dump-autoload; php artisan cache:clear'
+alias dump='composer clearcache; composer dump-autoload; php artisan cache:clear; php artisan view:clear'
 alias rollback='php artisan migrate:rollback'
 alias migrate='php artisan migrate'
 alias cycle='migrate; rollback; migrate'
