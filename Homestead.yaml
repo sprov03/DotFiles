@@ -24,6 +24,8 @@ sites:
       to: /var/www/leadpropeller/public
     - map: app.flippilot.local
       to: /var/www/app.flippilot/public
+    - map: flippilot.local
+      to: /var/www/api.flippilot/public
     - map: api.flippilot.local
       to: /var/www/api.flippilot/public
     - map: akceli.local
