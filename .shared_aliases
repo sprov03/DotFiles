@@ -8,7 +8,7 @@
 alias serve='npm run serve'
 
 # Vapor 
-alias vapor='php vendor/ben/vapor'
+alias vapor='php vendor/bin/vapor'
 
 # Git Aliases
 alias gs='git status -sb'
