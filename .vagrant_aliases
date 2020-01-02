@@ -17,9 +17,9 @@ alias leadpropeller='cd /var/www/leadpropeller'
 alias demo='cd /var/www/demo'
 alias tailwind='cd /var/www/tailwind'
 alias graphql='cd /var/www/graphql'
-alias flippilot='sites; cd api.flippilot; pwd; jobs'
-alias api.flippilot='sites; cd api.flippilot; pwd; jobs'
-alias app.flippilot='sites; cd app.flippilot'
+alias flippilot='sites; cd flippilot; pwd; jobs'
+alias api.flippilot='sites; cd flippilot; pwd; jobs'
+alias app.flippilot='sites; cd flippilot'
 
 # Scaffold Generation Commands
 alias gen='php artisan akceli:generate'

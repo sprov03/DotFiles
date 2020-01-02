@@ -22,28 +22,14 @@ folders:
 sites:
     - map: leadpropeller.local
       to: /var/www/leadpropeller/public
-    - map: app.flippilot.local
-      to: /var/www/app.flippilot/public
     - map: flippilot.local
-      to: /var/www/api.flippilot/public
-    - map: api.flippilot.local
-      to: /var/www/api.flippilot/public
+      to: /var/www/flippilot/public
     - map: akceli.local
       to: /var/www/akceli-new/public
     - map: akceli-new.local
       to: /var/www/akceli-new/public
     - map: akceli.satis
       to: /var/www/satis/public
-    - map: demo.local
-      to: /var/www/demo/public
-    - map: graphql.demo
-      to: /var/www/graphql/public
-    - map: tailwind.demo 
-      to: /var/www/tailwind/public
-    - map: git-task.local 
-      to: /var/www/git-task/public
-    - map: todolist.demo 
-      to: /var/www/todolist/public
 
 databases:
     - flippilot
@@ -51,11 +37,6 @@ databases:
     - akceli-old
     - akceli
     - akceli-new
-    - demo
-    - graphql
-    - tailwind
-    - todolist
-    - git-task
 
 features:
     - mariadb: false

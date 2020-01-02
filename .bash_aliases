@@ -17,10 +17,10 @@ alias api.flippilot='cd ~/Development/Sites/api.flippilot'
 alias app.flippilot='cd ~/Development/Sites/app.flippilot'
 
 # Vagrant Aliases
-alias vreprovision='homestead; vagrant reload --provision'
-alias vup='homestead; vagrant up; vagrant ssh'
-alias vshh='homestead; vagrant ssh'
-alias vhalt='homestead; vagrant halt'
+alias vreprovision='vagrant reload --provision'
+alias vup='vagrant up; vagrant ssh'
+alias vshh='vagrant ssh'
+alias vhalt='vagrant halt'
 
 #Ngrok Aliases
 alias ngrok='~/Development/Tools/ngrok'
