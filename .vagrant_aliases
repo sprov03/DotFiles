@@ -34,6 +34,7 @@ alias queue='php artisan queue:listen --timeout=120'
 alias jobs='horizon'
 alias horizon='php artisan horizon'
 
+alias seed='php artisan db:seed'
 alias fresh='php artisan migrate:fresh --seed'
 alias refresh='dump; fresh'
 alias updateakceli='composer remove akceli/laravel-code-generator; composer require akceli/laravel-code-generator dev-master'
