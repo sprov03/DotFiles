@@ -30,8 +30,8 @@ sites:
       to: /var/www/todo.demo/public
     - map: demo.local
       to: /var/www/demo/public
-    - map: getnovelize.local
-      to: /var/www/getnovelize.local/public
+    - map: getnovalize.local
+      to: /var/www/getnovalize.local/public
 
 databases:
     - flippilot
@@ -41,7 +41,7 @@ databases:
     - akceli-new
     - demo
     - todo-demo
-    - getnovelize
+    - getnovalize
 
 features:
     - mariadb: false
