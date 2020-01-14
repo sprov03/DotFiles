@@ -24,6 +24,7 @@ alias cleangit='cleanorigin; cleanlocal'
 alias fetch='git fetch'
 alias master='git checkout master; fetch; pull; migrate'
 alias dev='git checkout dev; fetch; pull; migrate'
+alias updatedev='dev; mergeMaster; push'
 
 function gittrash() {
 	branch=$(git branch | sed -n -e 's/^\* \(.*\)/\1/p')
