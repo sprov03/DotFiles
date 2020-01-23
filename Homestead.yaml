@@ -22,21 +22,18 @@ sites:
       to: /var/www/api.flippilot/public
     - map: akceli.local
       to: /var/www/akceli-new/public
-    - map: akceli-new.local
-      to: /var/www/akceli-new/public
     - map: akceli.satis
       to: /var/www/satis/public
     - map: todo.demo
       to: /var/www/todo.demo/public
     - map: demo.local
       to: /var/www/demo/public
-    - map: getnovalize.local
+    - map: novelize.local
       to: /var/www/getnovalize.local/public
 
 databases:
     - flippilot
     - leadpropeller
-    - akceli-old
     - akceli
     - akceli-new
     - demo

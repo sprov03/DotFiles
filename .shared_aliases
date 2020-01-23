@@ -22,6 +22,7 @@ alias fetch='git fetch'
 alias master='git checkout master; fetch; pull; migrate'
 alias alpha='git checkout r-alpha; fetch; pull'
 alias beta='git checkout r-beta; fetch; pull'
+alias feature='dev'
 
 function gittrash() {
 	branch=$(git branch | sed -n -e 's/^\* \(.*\)/\1/p')
