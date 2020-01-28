@@ -29,7 +29,7 @@ alias genbelongstomany='php artisan akceli:relationships'
 alias dump='composer clearcache; composer dump-autoload; php artisan cache:clear; php artisan view:clear'
 alias rollback='php artisan migrate:rollback'
 alias migrate='php artisan migrate --step'
-alias migrateViews='php artisan db:seed --class=UpdateViews"
+alias migrateViews='php artisan db:seed --class=UpdateViews'
 alias cycle='migrate; rollback; migrate'
 alias seed='php artisan migrate --seed'
 alias queue='php artisan queue:listen --timeout=120'
