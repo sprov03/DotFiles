@@ -16,7 +16,7 @@ alias akceli='cd /var/www/akceli-new'
 alias novalize='cd /var/www/getnovalize.local'
 alias leadpropeller='cd /var/www/leadpropeller'
 alias demo='cd /var/www/demo'
-alias api.flippilot='sites; cd flippilot; pwd'
+alias api.flippilot='sites; cd api.flippilot; pwd'
 
 # Scaffold Generation Commands
 alias gen='php artisan akceli:generate'
