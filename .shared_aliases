@@ -7,6 +7,9 @@
 # Npm 
 alias serve='npm run serve'
 
+# Vapor 
+alias vapor='php vendor/bin/vapor'
+
 # Git Aliases
 alias gs='git status -sb'
 alias pull='git pull'
@@ -20,9 +23,9 @@ alias cleangit='cleanorigin; cleanlocal'
 
 alias fetch='git fetch'
 alias master='git checkout master; fetch; pull; migrate'
-alias alpha='git checkout r-alpha; fetch; pull'
-alias beta='git checkout r-beta; fetch; pull'
 alias feature='dev'
+alias dev='git checkout dev; fetch; pull; migrate'
+alias updatedev='dev; mergeMaster; push'
 
 function gittrash() {
 	branch=$(git branch | sed -n -e 's/^\* \(.*\)/\1/p')

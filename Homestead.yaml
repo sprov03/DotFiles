@@ -18,16 +18,12 @@ folders:
 sites:
     - map: leadpropeller.local
       to: /var/www/leadpropeller/public
-    - map: api.flippilot.local
-      to: /var/www/api.flippilot/public
+    - map: flippilot.local
+      to: /var/www/flippilot/public
     - map: akceli.local
       to: /var/www/akceli-new/public
     - map: akceli.satis
       to: /var/www/satis/public
-    - map: todo.demo
-      to: /var/www/todo.demo/public
-    - map: demo.local
-      to: /var/www/demo/public
     - map: novelize.local
       to: /var/www/getnovalize.local/public
 
@@ -36,8 +32,6 @@ databases:
     - leadpropeller
     - akceli
     - akceli-new
-    - demo
-    - todo-demo
     - getnovalize
 
 features:
