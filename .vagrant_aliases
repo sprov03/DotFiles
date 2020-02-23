@@ -15,7 +15,7 @@ alias akceliold='cd /var/www/akceli'
 alias akceli='cd /var/www/akceli-new'
 alias novelize='cd /var/www/novelize'
 alias leadpropeller='cd /var/www/leadpropeller'
-alias demo='cd /var/www/demo'
+alias demo='cd /var/www/akceli-demo'
 alias api.flippilot='sites; cd api.flippilot; pwd'
 
 # Scaffold Generation Commands

@@ -13,8 +13,8 @@ alias dotfiles='cd ~/DotFiles'
 alias sites='cd ~/Development/Sites'
 alias akceli='cd ~/Development/Sites/akceli-new'
 alias docs='cd ~/Development/Sites/akceli-docs'
-alias api.flippilot='cd ~/Development/Sites/api.flippilot'
-alias app.flippilot='cd ~/Development/Sites/app.flippilot'
+alias api.flippilot='cd ~/Development/Sites/flippilot'
+alias akceli-demos='cd ~/Development/Sites/akceli-demos'
 
 # Vagrant Aliases
 alias vreprovision='homestead; vagrant reload --provision'
