@@ -10,6 +10,10 @@ alias serve='npm run serve'
 # Vapor 
 alias vapor='php vendor/bin/vapor'
 
+# Server Mainainece
+# Ducks  get file sizes
+alias ducks='du -cks * | sort -rn | head'
+
 # Git Aliases
 alias gs='git status -sb'
 alias pull='git pull'
