@@ -1,0 +1,48 @@
+---
+ip: "192.168.10.10"
+memory: 2048
+cpus: 2
+provider: virtualbox
+
+authorize: ~/.ssh/id_rsa.pub
+
+keys:
+    - ~/.ssh/id_rsa
+
+folders:
+    - map: ~/Development/Sites
+      to: /var/www
+    - map: ~/dot-files
+      to: /var/vagrant/dot-files
+
+sites:
+    - map: leadpropeller.local
+      to: /var/www/leadpropeller/public
+    - map: flippilot.local
+      to: /var/www/api.flippilot/public
+    - map: akceli.local
+      to: /var/www/akceli-new/public
+    - map: akceli.satis
+      to: /var/www/satis/public
+    - map: novelize.local
+      to: /var/www/getnovalize.local/public
+
+databases:
+    - flippilot
+    - leadpropeller
+    - akceli
+    - akceli-new
+    - getnovalize
+
+features:
+    - mariadb: false
+    - ohmyzsh: false
+    - webdriver: false
+    - mysql8: true
+
+# ports:
+#     - send: 50000
+#       to: 5000
+#     - send: 7777
+#       to: 777
+#       protocol: udp

@@ -5,6 +5,8 @@ if [ -f /var/vagrant/dot-files/.shared_aliases ]; then
     . /var/vagrant/dot-files/.shared_aliases
 fi
 
+alias composer="COMPOSER_MEMORY_LIMIT=-1 composer"
+
 # Important Directories
 alias sites='cd /var/www'
 alias dotfiles='cd /var/vagrant/dot-files'
