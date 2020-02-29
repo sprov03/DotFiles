@@ -19,7 +19,7 @@ sites:
     - map: leadpropeller.local
       to: /var/www/leadpropeller/public
     - map: flippilot.local
-      to: /var/www/flippilot/public
+      to: /var/www/api.flippilot/public
     - map: akceli.local
       to: /var/www/akceli-new/public
     - map: akceli.satis
