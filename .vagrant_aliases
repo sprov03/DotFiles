@@ -13,12 +13,11 @@ alias dotfiles='cd /var/vagrant/dot-files'
 
 # Sites
 alias akceliold='cd /var/www/akceli'
-#alias akceli='gen'
 alias akceli='cd /var/www/akceli'
 alias novelize='cd /var/www/novelize'
 alias leadpropeller='cd /var/www/leadpropeller'
 alias demo='cd /var/www/akceli-demo'
-alias api.flippilot='sites; cd api.flippilot; pwd'
+alias api.flippilot='sites; cd flippilot; pwd'
 
 # Scaffold Generation Commands
 alias gen='php artisan akceli:generate'
