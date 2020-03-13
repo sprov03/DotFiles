@@ -10,6 +10,7 @@ if [ -f ~/.vagrant_aliases ]; then
 fi
 
 " >> ~/.bashrc'
+source .bashrc
 
 ```
 
