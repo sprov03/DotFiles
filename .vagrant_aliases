@@ -21,7 +21,7 @@ alias api.flippilot='sites; cd flippilot; pwd'
 
 # Scaffold Generation Commands
 alias gen='php artisan akceli:generate'
-alias updateakceli='gittrash; composer update; composer require akceli/laravel-code-generator dev-master; publishakceli'
+alias updateakceli='composer update; composer require akceli/laravel-code-generator dev-master; publishakceli'
 alias publishakceli='php artisan akceli:publish'
 alias genbelongstomany='php artisan akceli:relationships'
 
