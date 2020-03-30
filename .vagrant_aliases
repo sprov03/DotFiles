@@ -28,7 +28,7 @@ alias publishakceli='php artisan akceli:publish'
 alias genbelongstomany='php artisan akceli:relationships'
 
 # Laravel Aliases
-alias dump='composer clearcache; composer dump-autoload; php artisan cache:clear; php artisan view:clear'
+alias dump='composer clearcache; composer dump-autoload; php artisan cache:clear; php artisan view:clear; php artisan route:cache'
 alias rollback='php artisan migrate:rollback'
 alias migrate='php artisan migrate --step'
 alias migrateViews='php artisan db:seed --class=UpdateViews'
