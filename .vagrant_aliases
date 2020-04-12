@@ -17,6 +17,7 @@ alias docs='cd /var/www/akceli-docs'
 alias novelize='cd /var/www/novelize'
 alias leadpropeller='cd /var/www/leadpropeller'
 alias demo='cd /var/www/akceli-demo'
+alias todo='cd /var/www/todo-demo'
 alias clientstore='cd /var/www/client-store-demo'
 alias api.flippilot='sites; cd flippilot; pwd'
 
