@@ -44,10 +44,6 @@ alias fresh='php artisan migrate:fresh --seed'
 alias refresh='dump; fresh'
 alias updateakceli='composer remove akceli/laravel-code-generator; composer require akceli/laravel-code-generator dev-master'
 
-function genmigration() {
-        php artisan make:migration ${1}_migration --create=$1
-}
-
 alias routes='php artisan route:list'
 function route() {
 	php artisan route:list | grep $1
