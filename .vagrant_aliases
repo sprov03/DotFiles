@@ -25,9 +25,9 @@ alias api.flippilot='sites; cd flippilot; pwd'
 # Scaffold Generation Commands
 alias gen='php artisan akceli:generate'
 alias updateakceli='composer clearcache; composer update; composer require akceli/laravel-code-generator dev-master; php artisan akceli:publish'
-alias reinstallalkceli='gittrash; updateakceli; publishakceli;'
 alias publishakceli='php artisan akceli:publish'
-alias genbelongstomany='php artisan akceli:relationships'
+alias reinstallalkceli='gittrash; updateakceli; publishakceli;'
+alias updateakceli='composer remove akceli/laravel-code-generator; composer require akceli/laravel-code-generator dev-master'
 
 # Laravel Aliases
 alias dump='composer clearcache; composer dump-autoload; php artisan cache:clear; php artisan view:clear'
@@ -41,9 +41,8 @@ alias jobs='horizon'
 alias horizon='php artisan horizon'
 
 alias seed='php artisan db:seed'
-alias fresh='php artisan migrate:fresh --seed'
+alias fresh='php artisan migrate:fresh --step --seed'
 alias refresh='dump; fresh'
-alias updateakceli='composer remove akceli/laravel-code-generator; composer require akceli/laravel-code-generator dev-master'
 
 alias routes='php artisan route:list'
 function route() {
