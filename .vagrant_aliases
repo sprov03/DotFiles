@@ -20,6 +20,7 @@ alias demo='cd /var/www/akceli-demo'
 alias todo='cd /var/www/api.todo'
 alias gittask='cd /var/www/api.gittask'
 alias clientstore='cd /var/www/client-store-demo'
+alias strict-models='cd /var/www/strict-models'
 alias api.flippilot='sites; cd flippilot; pwd'
 
 # Scaffold Generation Commands
