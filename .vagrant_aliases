@@ -24,6 +24,7 @@ alias strict-models='cd /var/www/strict-models'
 alias api.flippilot='sites; cd flippilot; pwd'
 
 # Scaffold Generation Commands
+alias gendocs='php api-blueprint/compileApiBlueprint.php'
 alias gen='php artisan akceli:generate'
 alias updateakceli='composer clearcache; composer update; composer require akceli/laravel-code-generator dev-master; php artisan akceli:publish'
 alias publishakceli='php artisan akceli:publish'
