@@ -8,8 +8,9 @@ fi
 alias composer="COMPOSER_MEMORY_LIMIT=-1 composer"
 
 #alias reinstall='gittrash; composer require akceli/laravel-code-generator; php artisan akceli:publish'
-#alias reinstall='gittrash; composer require akceli/laravel-code-generator; php artisan akceli:publish; php artisan akceli:generate bootstrap akceli'
-alias reinstall='gittrash; composer require akceli/laravel-code-generator; php artisan akceli:publish; php artisan akceli:generate bootstrap akceli; php artisan akceli:generate bootstrap sanctum-api'
+alias reinstall='gittrash; composer require akceli/laravel-code-generator; php artisan akceli:publish; php artisan akceli:generate bootstrap akceli'
+#alias reinstall='gittrash; composer require akceli/laravel-code-generator; php artisan akceli:publish; php artisan akceli:generate bootstrap akceli; php artisan akceli:generate bootstrap sanctum-api'
+#alias reinstall='gittrash; php artisan akceli:generate bootstrap sanctum-api'
 
 # Important Directories
 alias sites='cd /var/www'
