@@ -18,6 +18,7 @@ alias sites='cd /var/www'
 alias dotfiles='cd /var/vagrant/dot-files'
 
 # Sites
+alias portal='cd /var/www/local.akceli.io'
 alias akceli='cd /var/www/akceli'
 alias docs='cd /var/www/akceli-docs'
 alias novelize='cd /var/www/novelize'
