@@ -45,7 +45,7 @@ alias updateakceli='composer remove akceli/laravel-code-generator; composer requ
 # Laravel Aliases
 alias dump='composer clearcache; composer dump-autoload; php artisan cache:clear; php artisan view:clear'
 alias rollback='php artisan migrate:rollback; php artisan migrate:rollback --database=testing'
-alias migrate='php artisan migrate --step; php artisan migrate --step --database=testing'
+alias migrate='php artisan migrate --step; php artisan migrate --step --database=testing; php artisan db:seed --class=TestSeeder --database=testing'
 #alias migrate='php artisan migrate --step'
 alias cycle='migrate; rollback; migrate'
 alias queue='php artisan queue:listen --timeout=120'
