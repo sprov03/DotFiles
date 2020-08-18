@@ -31,7 +31,7 @@ alias clientstore='cd /var/www/client-store-demo'
 alias strict-models='cd /var/www/strict-models'
 alias api.flippilot='sites; cd flippilot; pwd'
 alias pos='sites; cd pos; pwd'
-alias cleanDocs='git checkout storage/responses; git checkout resources/'
+alias cleanDocs='git checkout storage/responses; git checkout resources/; git checkout public/docs'
 
 # Scaffold Generation Commands
 alias gendocs='php artisan flippilot:build_api_docs_command'
