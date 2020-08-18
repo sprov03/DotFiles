@@ -30,6 +30,7 @@ alias gittask='cd /var/www/api.gittask'
 alias clientstore='cd /var/www/client-store-demo'
 alias strict-models='cd /var/www/strict-models'
 alias api.flippilot='sites; cd flippilot; pwd'
+alias pos='sites; cd pos; pwd'
 
 # Scaffold Generation Commands
 alias gendocs='php artisan flippilot:build_api_docs_command'
