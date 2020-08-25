@@ -60,7 +60,7 @@ alias horizon='php artisan horizon'
 
 alias seed='php artisan db:seed'
 alias fresh='php artisan migrate:fresh --step --seed; php artisan migrate:fresh --step --database=testing'
-alias posfresh='php artisan migrate:fresh --step --seed; php artisan migrate:fresh --step --seed --database=testing'
+alias posfresh='php artisan migrate:fresh --step --seed'
 #alias fresh='php artisan migrate:fresh --step --seed'
 alias refresh='dump; fresh'
 
