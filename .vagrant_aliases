@@ -34,6 +34,7 @@ alias pos='sites; cd pos; pwd'
 alias cleanDocs='git checkout storage/responses; git checkout resources/; git checkout public/docs'
 
 # Scaffold Generation Commands
+alias genidehelpers='php artisan ide-helper:models'
 alias gendocs='php artisan flippilot:build_api_docs_command'
 alias gdocs='php artisan flippilot:build_api_docs_command'
 alias gen='php artisan akceli:generate'
