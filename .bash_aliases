@@ -15,6 +15,7 @@ alias akceli='cd ~/Development/Sites/akceli-new'
 alias docs='cd ~/Development/Sites/akceli-docs'
 alias api.flippilot='cd ~/Development/Sites/flippilot'
 alias akceli-demos='cd ~/Development/Sites/akceli-demos'
+alias deploy='commit deploy"; push'
 
 # Vagrant Aliases
 alias vreprovision='homestead; vagrant reload --provision'
