@@ -115,6 +115,7 @@ function pulldotfiles() {
 	CWD=$(pwd)
 	dotfiles
 	pull
+	cd $CWD
 }
 
 function savedotfiles() {
