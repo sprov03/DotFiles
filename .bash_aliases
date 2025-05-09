@@ -1,4 +1,5 @@
-alias newalias='vim ~/.bash_aliases; source ~/.bashrc_aliases'
+alias newalias='vim ~/.bash_aliases; source ~/.bashrc_aliases; savedotfiles>/dev/null'
+alias newsharedalias='pulldotfiles; vim ~/.shared_aliases; source ~/.bashrc; savedotfiles>/dev/null'
 alias showalias="cat ~/.bash_aliases"
 
 alias mcpServe="uv run mcp dev "
