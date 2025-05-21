@@ -1,4 +1,4 @@
-alias newalias='vim ~/.bash_aliases; source ~/.bashrc_aliases; savedotfiles>/dev/null'
+alias newalias='vim ~/.bash_aliases; source ~/.bash_profile; savedotfiles>/dev/null'
 alias newsharedalias='pulldotfiles; vim ~/.shared_aliases; source ~/.bashrc; savedotfiles>/dev/null'
 alias showalias="cat ~/.bash_aliases"
 
@@ -16,6 +16,8 @@ alias sshNew='ssh root@107.170.58.192'
 alias gemini='open-codex --provider gemini --model gemini-2.5-pro-exp-03-25 --approval-mode full-auto '
 alias grok='open-codex --provider xai --model grok-3 --endpoint https://api.x.ai/v1 --approval-mode full-auto '
 alias openAi='codex --approval-mode full-auto '
+
+alias addlocalhost='function _addhost() { echo "127.0.0.1 $1" | sudo tee -a /etc/hosts; }; _addhost'
 
 
 # Important Directories
@@ -50,6 +52,7 @@ alias ngrokAkceli='ngrok http 192.168.10.10:80 -host-header=akceli.local -subdom
 alias ngrokNovelizeLocal='ngrok http 192.168.10.10:80 -host-header=novelize.local -subdomain=shawn-flippilot'
 alias ngrokshawnFlippilotLocal='ngrok http 192.168.10.10:80 -host-header=api.flippilot.local -subdomain=shawn-flippilot'
 #alias ngrokFlipPiolotLocal='ngrok http 192.168.10.10:80 -host-header=app.flippilot.local -subdomain=flippilot'
+alias ngrokMindForge='ngrok http 127.0.0.1:80 -host-header=mind-forge.local -subdomain=flippilot'
 alias ngrokFlipPiolotLocal='ngrok http 127.0.0.1:80 -host-header=flippilot.local -subdomain=flippilot'
 alias ngrokVaToolLocal='ngrok http 127.0.0.1:80 -host-header=app.forefront-va-tool.local -subdomain=flippilot'
 alias ngrokProjectTracker='ngrok http 127.0.0.1:80 http://localhost:3000 -subdomain=flippilot'
