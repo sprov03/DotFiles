@@ -13,7 +13,7 @@ alias sshServer='ssh root@64.227.31.34'
 alias sshNew='ssh root@107.170.58.192'
 
 # Codex
-alias gemini='open-codex --provider gemini --model gemini-2.5-pro-exp-03-25 --approval-mode full-auto '
+# alias gemini='open-codex --provider gemini --model gemini-2.5-pro-exp-03-25 --approval-mode full-auto '
 alias grok='open-codex --provider xai --model grok-3 --endpoint https://api.x.ai/v1 --approval-mode full-auto '
 alias openAi='codex --approval-mode full-auto '
 

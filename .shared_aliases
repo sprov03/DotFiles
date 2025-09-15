@@ -8,7 +8,7 @@
 alias serve='npm run serve'
 
 # Vapor 
-alias vapor='php vendor/bin/vapor'
+alias vapor='php81 vendor/bin/vapor'
 
 # Server Mainainece
 # Ducks  get file sizes
@@ -35,42 +35,41 @@ alias dev='git checkout dev; fetch; pull; migrate'
 alias updatedev='dev; mergeMaster; push'
 
 
-
 # Scaffold Generation Commands
-alias genidehelpers='php artisan ide-helper:models'
-alias gendocs='php artisan flippilot:build_api_docs_command'
-alias gdocs='php artisan flippilot:build_api_docs_command'
-alias gen='php artisan akceli:generate'
+alias genidehelpers='php81 artisan ide-helper:models'
+alias gendocs='php81 artisan flippilot:build_api_docs_command'
+alias gdocs='php81 artisan flippilot:build_api_docs_command'
+alias gen='php81 artisan akceli:generate'
 alias sync='gen schema-sync'
 alias model='gen schema-model'
-alias updateakceli='composer clearcache; composer update; composer require akceli/laravel-code-generator dev-master; php artisan akceli:publish'
-alias publishakceli='php artisan akceli:publish'
+alias updateakceli='composer clearcache; composer update; composer require akceli/laravel-code-generator dev-master; php81 artisan akceli:publish'
+alias publishakceli='php81 artisan akceli:publish'
 alias reinstallalkceli='gittrash; updateakceli; publishakceli;'
 alias updateakceli='composer remove akceli/laravel-code-generator; composer require akceli/laravel-code-generator dev-master'
 
 # Laravel Aliases
-alias dump='composer clearcache; composer dump-autoload; php artisan cache:clear; php artisan view:clear'
-alias rollback='php artisan migrate:rollback; php artisan migrate:rollback --database=testing'
-#alias seedTesting='php artisan db:seed --class=TestSeeder --database=testing'
-alias seedTesting='php artisan db:seed --database=testing'
-alias migrateTesting='php artisan migrate --step --database=testing'
-alias posmigrate='php artisan migrate --step'
-alias migrate='php artisan migrate --step; migrateTesting'
-#alias migrate='php artisan migrate --step'
+alias dump='composer clearcache; composer dump-autoload; php81 artisan cache:clear; php81 artisan view:clear'
+alias rollback='php81 artisan migrate:rollback; php81 artisan migrate:rollback --database=testing'
+#alias seedTesting='php81 artisan db:seed --class=TestSeeder --database=testing'
+alias seedTesting='php81 artisan db:seed --database=testing'
+alias migrateTesting='php81 artisan migrate --step --database=testing'
+alias posmigrate='php81 artisan migrate --step'
+alias migrate='php81 artisan migrate --step; migrateTesting'
+#alias migrate='php81 artisan migrate --step'
 alias cycle='migrate; rollback; migrate'
-alias queue='php artisan queue:listen --timeout=120'
+alias queue='php81 artisan queue:listen --timeout=120'
 alias jobs='horizon'
-alias horizon='php artisan horizon'
+alias horizon='php81 artisan horizon'
 
-alias seed='php artisan db:seed'
-alias fresh='php artisan migrate:fresh --step; php artisan migrate:fresh --step --database=testing; dump; seed'
-alias posfresh='php artisan migrate:fresh --step --seed'
-#alias fresh='php artisan migrate:fresh --step --seed'
+alias seed='php81 artisan db:seed'
+alias fresh='php81 artisan migrate:fresh --step; php81 artisan migrate:fresh --step --database=testing; dump; seed'
+alias posfresh='php81 artisan migrate:fresh --step --seed'
+#alias fresh='php81 artisan migrate:fresh --step --seed'
 alias refresh='dump; fresh'
 
-alias routes='php artisan route:list'
+alias routes='php81 artisan route:list'
 function route() {
-        php artisan route:list | grep $1
+        php81 artisan route:list | grep $1
 }
 
 
