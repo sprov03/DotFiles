@@ -1,16 +1,7 @@
 alias newalias='vim ~/.bash_aliases; source ~/.bash_profile; savedotfiles>/dev/null'
-alias newsharedalias='pulldotfiles; vim ~/.shared_aliases; source ~/.bashrc; savedotfiles>/dev/null'
 alias showalias="cat ~/.bash_aliases"
 
 alias mcpServe="uv run mcp dev "
-
-if [ -f ~/.shared_aliases ]; then
-    . ~/.shared_aliases
-fi
-
-#alias sshServer='ssh forge@24.144.123.119'
-alias sshServer='ssh root@64.227.31.34'
-alias sshNew='ssh root@107.170.58.192'
 
 # Codex
 # alias gemini='open-codex --provider gemini --model gemini-2.5-pro-exp-03-25 --approval-mode full-auto '
@@ -19,33 +10,13 @@ alias openAi='codex --approval-mode full-auto '
 
 alias addlocalhost='function _addhost() { echo "127.0.0.1 $1" | sudo tee -a /etc/hosts; }; _addhost'
 
-
 # Important Directories
 alias development='cd ~/Development'
-alias homestead='cd ~/Development/VirtualBoxes/Homestead'
-alias dotfiles='cd ~/DotFiles'
 alias sites='cd ~/Development/Sites'
-alias akceli='cd ~/Development/Sites/akceli-new'
-alias api.flippilot='cd ~/Development/Sites/flippilot'
-alias akceli-demos='cd ~/Development/Sites/akceli-demos'
-alias deploy='commit deploy"; push'
-alias docup='sail up -d; sail shell'
-
-alias docs='cd ~/Development/Sites/docs-ai'
-alias properties='cd ~/Development/Sites/property-tracker; nvm use 20'
-
-alias start='npm run start'
-
-alias serveLocal='cd backend; npm run serve && cd ../frontend; npm run start'
-
-# Vagrant Aliases
-alias vreprovision='homestead; vagrant reload --provision'
-alias vup='homestead; vagrant up; vagrant ssh'
-alias vshh='homestead; vagrant ssh'
-alias vhalt='homestead; vagrant halt'
+alias dotfiles='cd ~/DotFiles'
 
 #Ngrok Aliases
-alias ngrok='~/Development/Tools/ngrok'
+#alias ngrok='~/Development/Tools/ngrok'
 alias ngrokPort='ngrok http '
 #alias ngrokAkcelm='ngrok http 192.168.10.10:80 -host-header=rapid-code-gen.local -subdomain=akceli'
 alias ngrokAkceli='ngrok http 192.168.10.10:80 -host-header=akceli.local -subdomain=akceli'
@@ -56,3 +27,112 @@ alias ngrokMindForge='ngrok http 127.0.0.1:80 -host-header=mind-forge.local -sub
 alias ngrokFlipPiolotLocal='ngrok http 127.0.0.1:80 -host-header=flippilot.local -subdomain=flippilot'
 alias ngrokVaToolLocal='ngrok http 127.0.0.1:80 -host-header=app.forefront-va-tool.local -subdomain=flippilot'
 alias ngrokProjectTracker='ngrok http 127.0.0.1:80 http://localhost:3000 -subdomain=flippilot'
+
+
+# Server Mainainece
+# Ducks  get file sizes
+alias ducks='du -cks * | sort -rn | head'
+
+# Git Aliases
+alias gs='git status -sb'
+alias pull='git pull'
+alias push='git push'
+alias commit='git add -A; git commit -am "'
+alias log="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+alias gitclear='git add -A; git stash'
+alias cleanorigin="git remote update origin --prune"
+alias cleanlocal='git branch | grep -v "master" | xargs git branch -D'
+alias cleangit='cleanorigin; cleanlocal'
+
+alias fetch='git fetch'
+alias master='git checkout master; fetch; pull; migrate'
+
+
+# Scaffold Generation Commands
+alias genidehelpers='php81 artisan ide-helper:models'
+alias gen='php81 artisan akceli:generate'
+alias sync='gen schema-sync'
+alias model='gen schema-model'
+
+# Akceli Commands
+alias updateakceli='composer clearcache; composer update; composer require akceli/laravel-code-generator dev-master; php81 artisan akceli:publish'
+alias publishakceli='php81 artisan akceli:publish'
+alias reinstallalkceli='gittrash; updateakceli; publishakceli;'
+alias updateakceli='composer remove akceli/laravel-code-generator; composer require akceli/laravel-code-generator dev-master'
+
+# Laravel Aliases
+alias dumpTesting='composer clearcache; composer dump-autoload; php81 artisan cache:clear; php81 artisan view:clear'
+alias dump='dumpTesting'
+alias migrateTesting='php /Users/shawnpivonka/Development/Sites/pweb/artisan migrate --database=testing_mysql'
+alias migrate='migrate'
+alias seedTesting='php /Users/shawnpivonka/Development/Sites/pweb/artisan db:seed --database=testing_mysql'
+alias seed='seedTesting'
+alias rollbackTesting='php /Users/shawnpivonka/Development/Sites/pweb/artisan migrate:rollback --database=testing_mysql'
+alias rollback='rollbackTesting'
+alias cycleTesting='migrateTesting; rollbackTesting; migrateTesting'
+alias cycle='cycleTesting'
+alias queue='php81 artisan queue:listen --timeout=120'
+
+alias horizon='php81 artisan horizon'
+alias jobs='horizon'
+
+alias freshTesting='php /Users/shawnpivonka/Development/Sites/pweb/artisan migrate:fresh --database=testing_mysql; dumpTesting'
+alias fresh='freshTesting'
+
+alias routes='php81 artisan route:list'
+function route() {
+        php81 artisan route:list | grep $1
+}
+
+
+function gittrash() {
+	branch=$(git branch | sed -n -e 's/^\* \(.*\)/\1/p')
+	git checkout -b trash-branch
+	commit trash"
+	git checkout $branch
+	git branch -D trash-branch
+}
+function pushup() {
+	branch=$(git branch | sed -n -e 's/^\* \(.*\)/\1/p')
+	git push --set-upstream origin $branch
+}
+function mergeMaster() {
+	branch=$(git branch | sed -n -e 's/^\* \(.*\)/\1/p')
+	echo $branch
+	master
+	git checkout $branch
+	git merge master
+	migrate
+}
+function merge() {
+	branch=$(git branch | sed -n -e 's/^\* \(.*\)/\1/p')
+	git checkout $1
+	git fetch
+	git pull
+	git checkout $branch
+	git merge $1
+}
+
+function pulldown() {
+	master
+	git checkout $1
+	branch=$(git branch | sed -n -e 's/^\* \(.*\)/\1/p')
+	git checkout -b ${branch}-shawn
+	mergeMaster
+	gs
+}
+
+function pulldotfiles() {
+	CWD=$(pwd)
+	dotfiles
+	pull
+	cd $CWD
+}
+
+function savedotfiles() {
+	CWD=$(pwd)
+	dotfiles
+	commit saving changes to dot-files"
+	push
+	cd $CWD
+}
