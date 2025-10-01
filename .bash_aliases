@@ -63,11 +63,11 @@ alias updateakceli='composer remove akceli/laravel-code-generator; composer requ
 # Laravel Aliases
 alias dumpTesting='composer clearcache; composer dump-autoload; php81 artisan cache:clear; php81 artisan view:clear'
 alias dump='dumpTesting'
-alias migrateTesting='php /Users/shawnpivonka/Development/Sites/pweb/artisan migrate --database=testing_mysql'
+alias migrateTesting='APP_ENV=testing php /Users/shawnpivonka/Development/Sites/pweb/artisan migrate --database=testing_mysql'
 alias migrate='migrate'
-alias seedTesting='php /Users/shawnpivonka/Development/Sites/pweb/artisan db:seed --database=testing_mysql'
+alias seedTesting='APP_ENV=testing php /Users/shawnpivonka/Development/Sites/pweb/artisan db:seed --database=testing_mysql'
 alias seed='seedTesting'
-alias rollbackTesting='php /Users/shawnpivonka/Development/Sites/pweb/artisan migrate:rollback --database=testing_mysql'
+alias rollbackTesting='APP_ENV=testing php /Users/shawnpivonka/Development/Sites/pweb/artisan migrate:rollback --database=testing_mysql'
 alias rollback='rollbackTesting'
 alias cycleTesting='migrateTesting; rollbackTesting; migrateTesting'
 alias cycle='cycleTesting'
@@ -76,7 +76,7 @@ alias queue='php81 artisan queue:listen --timeout=120'
 alias horizon='php81 artisan horizon'
 alias jobs='horizon'
 
-alias freshTesting='php /Users/shawnpivonka/Development/Sites/pweb/artisan migrate:fresh --database=testing_mysql; dumpTesting'
+alias freshTesting='APP_ENV=testing php /Users/shawnpivonka/Development/Sites/pweb/artisan migrate:fresh --database=testing_mysql; dumpTesting'
 alias fresh='freshTesting'
 
 alias routes='php81 artisan route:list'
