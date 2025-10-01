@@ -65,7 +65,7 @@ alias dumpTesting='composer clearcache; composer dump-autoload; php81 artisan ca
 alias dump='dumpTesting'
 #alias migrateTesting='php /Users/shawnpivonka/Development/Sites/pweb/artisan migrate --database=testing_mysql --env=testing'
 #alias migrateTesting='php /Users/shawnpivonka/Development/Sites/pweb/artisan migrate --env=testing'
-alias migrateTesting='php /Users/shawnpivonka/Development/Sites/pweb/artisan migrate --env=dev'
+alias migrateTesting='php /Users/shawnpivonka/Development/Sites/pweb/artisan migrate --env=testing'
 alias migrate='migrateTesting'
 alias seedTesting='php /Users/shawnpivonka/Development/Sites/pweb/artisan db:seed --database=testing_mysql --env=testing'
 alias seed='seedTesting'
