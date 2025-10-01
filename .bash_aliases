@@ -63,7 +63,8 @@ alias updateakceli='composer remove akceli/laravel-code-generator; composer requ
 # Laravel Aliases
 alias dumpTesting='composer clearcache; composer dump-autoload; php81 artisan cache:clear; php81 artisan view:clear'
 alias dump='dumpTesting'
-alias migrateTesting='APP_ENV=testing php /Users/shawnpivonka/Development/Sites/pweb/artisan migrate --database=testing_mysql'
+#alias migrateTesting='APP_ENV=testing php /Users/shawnpivonka/Development/Sites/pweb/artisan migrate --database=testing_mysql'
+alias migrateTesting='php /Users/shawnpivonka/Development/Sites/pweb/artisan migrate --database=testing_mysql'
 alias migrate='migrateTesting'
 alias seedTesting='APP_ENV=testing php /Users/shawnpivonka/Development/Sites/pweb/artisan db:seed --database=testing_mysql'
 alias seed='seedTesting'
