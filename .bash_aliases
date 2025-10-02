@@ -49,14 +49,14 @@ alias master='git checkout master; fetch; pull; migrate'
 
 
 # Scaffold Generation Commands
-alias genidehelpers='php81 artisan ide-helper:models'
-alias gen='php81 artisan akceli:generate'
-alias sync='gen schema-sync'
-alias model='gen schema-model'
+alias genidehelpers='php artisan ide-helper:models --env=testing'
+alias gen='php artisan akceli:generate --env=testing'
+alias sync='gen schema-sync --env=testing'
+alias model='gen schema-model --env=testing'
 
 # Akceli Commands
-alias updateakceli='composer clearcache; composer update; composer require akceli/laravel-code-generator dev-master; php81 artisan akceli:publish'
-alias publishakceli='php81 artisan akceli:publish'
+alias updateakceli='composer clearcache; composer update; composer require akceli/laravel-code-generator dev-master; php artisan akceli:publish'
+alias publishakceli='php artisan akceli:publish'
 alias reinstallalkceli='gittrash; updateakceli; publishakceli;'
 alias updateakceli='composer remove akceli/laravel-code-generator; composer require akceli/laravel-code-generator dev-master'
 
@@ -76,7 +76,6 @@ alias queue='php81 artisan queue:listen --timeout=120'
 alias horizon='php81 artisan horizon'
 alias jobs='horizon'
 
-# alias freshTesting='php /Users/shawnpivonka/Development/Sites/pweb/artisan migrate:fresh --env=testing; dumpTesting'
 alias freshTesting='php /Users/shawnpivonka/Development/Sites/pweb/artisan migrate:fresh --env=testing; dumpTesting'
 alias fresh='freshTesting'
 
