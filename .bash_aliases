@@ -61,7 +61,7 @@ alias reinstallalkceli='gittrash; updateakceli; publishakceli;'
 alias updateakceli='composer remove akceli/laravel-code-generator; composer require akceli/laravel-code-generator dev-master'
 
 # Laravel Aliases
-alias dumpTesting='composer clearcache; composer dump-autoload; php81 artisan cache:clear; php81 artisan view:clear'
+alias dumpTesting='composer clearcache; composer dump-autoload; php artisan cache:clear; php artisan view:clear'
 alias dump='dumpTesting'
 alias migrateTesting='php /Users/shawnpivonka/Development/Sites/pweb/artisan migrate'
 #alias migrateTesting='php /Users/shawnpivonka/Development/Sites/pweb/artisan migrate --database=testing_mysql --env=testing'
@@ -79,7 +79,8 @@ alias queue='php81 artisan queue:listen --timeout=120'
 alias horizon='php81 artisan horizon'
 alias jobs='horizon'
 
-alias freshTesting='php /Users/shawnpivonka/Development/Sites/pweb/artisan migrate:fresh --database=testing_mysql; dumpTesting'
+# alias freshTesting='php /Users/shawnpivonka/Development/Sites/pweb/artisan migrate:fresh --database=testing_mysql; dumpTesting'
+alias freshTesting='php /Users/shawnpivonka/Development/Sites/pweb/artisan migrate:fresh --database=testing_mysql --env=testing; dumpTesting'
 alias fresh='freshTesting'
 
 alias routes='php81 artisan route:list'
