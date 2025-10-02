@@ -71,17 +71,17 @@ alias rollbackTesting='php /Users/shawnpivonka/Development/Sites/pweb/artisan mi
 alias rollback='rollbackTesting'
 alias cycleTesting='migrateTesting; rollbackTesting; migrateTesting'
 alias cycle='cycleTesting'
-alias queue='php81 artisan queue:listen --timeout=120'
+alias queue='php artisan queue:listen --timeout=120'
 
-alias horizon='php81 artisan horizon'
+alias horizon='php artisan horizon'
 alias jobs='horizon'
 
 alias freshTesting='php /Users/shawnpivonka/Development/Sites/pweb/artisan migrate:fresh --env=testing; dumpTesting'
 alias fresh='freshTesting'
 
-alias routes='php81 artisan route:list'
+alias routes='php artisan route:list'
 function route() {
-        php81 artisan route:list | grep $1
+        php artisan route:list | grep $1
 }
 
 
