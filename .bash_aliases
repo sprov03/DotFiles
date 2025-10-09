@@ -61,7 +61,8 @@ alias reinstallalkceli='gittrash; updateakceli; publishakceli;'
 alias updateakceli='composer remove akceli/laravel-code-generator; composer require akceli/laravel-code-generator dev-master'
 
 # Laravel Aliases
-alias dumpTesting='composer clearcache; composer dump-autoload; php artisan cache:clear; php artisan view:clear'
+#alias dumpTesting='composer clearcache; composer dump-autoload; php artisan cache:clear; php artisan view:clear'
+alias dumpTesting='composer clearcache; composer dump-autoload; php artisan cache:clear --env=testing; php artisan view:clear'
 alias dump='dumpTesting'
 alias migrateTesting='php /Users/shawnpivonka/Development/Sites/pweb/artisan migrate --env=testing'
 alias migrate='migrateTesting'
