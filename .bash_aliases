@@ -18,7 +18,7 @@ alias dotfiles='cd ~/DotFiles'
 #Ngrok Aliases
 #alias ngrok='~/Development/Tools/ngrok'
 alias ngrokPort='ngrok http '
-alias ngrokDroneStrike='ngrok http 127.0.0.1:80 --host-header=api.dronestrike.testing '
+alias ngrokDroneStrike='ngrok http 127.0.0.1:80 --host-header=api.dronestrike.test'
 
 
 # Server Mainainece
