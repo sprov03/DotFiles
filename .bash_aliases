@@ -18,6 +18,7 @@ alias dotfiles='cd ~/DotFiles'
 #Ngrok Aliases
 #alias ngrok='~/Development/Tools/ngrok'
 alias ngrokPort='ngrok http '
+alias ngrokDroneStrike='ngrok http 127.0.0.1:80 -host-header=api.dronestrike.testing'
 #alias ngrokAkcelm='ngrok http 192.168.10.10:80 -host-header=rapid-code-gen.local -subdomain=akceli'
 alias ngrokAkceli='ngrok http 192.168.10.10:80 -host-header=akceli.local -subdomain=akceli'
 alias ngrokNovelizeLocal='ngrok http 192.168.10.10:80 -host-header=novelize.local -subdomain=shawn-flippilot'
