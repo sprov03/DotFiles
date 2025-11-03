@@ -4,9 +4,9 @@ alias showalias="cat ~/.bash_aliases"
 alias mcpServe="uv run mcp dev "
 
 function catall() {
-    local dir="${1:-.}"
-    dir="${dir%/}"  # Remove trailing slash if present
-    find "$dir" -type f -exec sh -c 'echo "=== $1 ==="; cat "$1"' _ {} \;
+    	local dir="${1:-.}"
+    	dir="${dir%/}"
+    	find "$dir" -type f -exec sh -c "echo \"=== \$1 ===\"; cat \"\$1\"" _ {} \;
 }
 
 # Codex
