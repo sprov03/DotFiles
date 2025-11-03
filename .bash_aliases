@@ -3,7 +3,9 @@ alias showalias="cat ~/.bash_aliases"
 
 alias mcpServe="uv run mcp dev "
 
-alias catall='find . -type f -exec sh -c '\''echo "=== $1 ==="; cat "$1"'\'' _ {} \;'
+catall() {
+    find "${1:-.}" -type f -exec sh -c 'echo "=== $1 ==="; cat "$1"' _ {} \;
+}
 
 # Codex
 # alias gemini='open-codex --provider gemini --model gemini-2.5-pro-exp-03-25 --approval-mode full-auto '
