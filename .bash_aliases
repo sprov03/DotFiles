@@ -3,7 +3,7 @@ alias showalias="cat ~/.bash_aliases"
 
 alias mcpServe="uv run mcp dev "
 
-catall() {
+function catall() {
     find "${1:-.}" -type f -exec sh -c 'echo "=== $1 ==="; cat "$1"' _ {} \;
 }
 
