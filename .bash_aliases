@@ -83,9 +83,9 @@ alias queue='php artisan queue:listen --timeout=120'
 alias horizon='php artisan horizon'
 alias jobs='horizon'
 
-#alias freshTesting='php /Users/shawnpivonka/Development/Sites/panacea/pweb/artisan migrate:fresh --env=testing; dumpTesting'
-alias freshTesting='php artisan migrate:fresh --env=testing -step; dumpTesting'
-alias fresh='freshTesting'
+#alias refreshTesting='php /Users/shawnpivonka/Development/Sites/panacea/pweb/artisan migrate:fresh --env=testing; dumpTesting'
+alias refreshTesting='php artisan migrate:fresh --env=testing -step; dumpTesting'
+alias refresh='freshTesting'
 
 alias routes='php artisan route:list'
 function route() {
