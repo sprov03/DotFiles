@@ -6,7 +6,11 @@ alias mcpServe="uv run mcp dev "
 function catall() {
     local dir="${1:-.}"
     dir="${dir%/}"
-    find "$dir" -type f -exec sh -c "echo \"=== \$1 ===\"; cat \"\$1\"" _ {} \;
+    find "$dir" -type f \
+        -not -name ".env*" \
+        -not -name "*.log" \
+        -not -name ".git*" \
+        -exec sh -c "echo \"=== \$1 ===\"; cat \"\$1\"" _ {} \; 
 }
 
 # Codex
