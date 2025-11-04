@@ -10,7 +10,7 @@ function catall() {
         -not \( -name ".env*" -not -name ".env.example" \) \
         -not -name "*.log" \
         -not -name ".git*" \
-        -exec sh -c "echo \"=== \$1 ===\"; cat \"\$1\"" _ {} \; 
+        -exec sh -c "echo \"=== \$1 ===\"; cat \"\$1\"; echo" _ {} \; 
 }
 
 # Codex
