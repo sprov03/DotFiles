@@ -23,6 +23,7 @@ alias addlocalhost='function _addhost() { echo "127.0.0.1 $1" | sudo tee -a /etc
 # Important Directories
 alias development='cd ~/Development'
 alias sites='cd ~/Development/Sites'
+alias panacea='cd ~/Development/Sites/panacea'
 alias dotfiles='cd ~/DotFiles'
 
 #Ngrok Aliases
@@ -83,7 +84,7 @@ alias horizon='php artisan horizon'
 alias jobs='horizon'
 
 #alias freshTesting='php /Users/shawnpivonka/Development/Sites/panacea/pweb/artisan migrate:fresh --env=testing; dumpTesting'
-alias freshTesting='php artisan migrate:fresh --env=testing; dumpTesting'
+alias freshTesting='php artisan migrate:fresh --env=testing -step; dumpTesting'
 alias fresh='freshTesting'
 
 alias routes='php artisan route:list'
