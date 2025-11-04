@@ -7,7 +7,7 @@ function catall() {
     local dir="${1:-.}"
     dir="${dir%/}"
     find "$dir" -type f \
-        -not -name ".env*" \
+        -not \( -name ".env*" -not -name ".env.example" \) \
         -not -name "*.log" \
         -not -name ".git*" \
         -exec sh -c "echo \"=== \$1 ===\"; cat \"\$1\"" _ {} \; 
