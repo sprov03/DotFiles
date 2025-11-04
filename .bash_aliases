@@ -1,4 +1,4 @@
-alias newalias='vim ~/.bash_aliases; source ~/.bash_profile; savedotfiles>/dev/null'
+alias newalias='vim ~/.bash_aliases; source ~/.bash_profile; savedotfiles>/dev/null; source ~/.bash_aliases'
 alias showalias="cat ~/.bash_aliases"
 
 alias mcpServe="uv run mcp dev "
