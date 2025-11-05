@@ -13,6 +13,9 @@ function catall() {
         -exec sh -c "echo \"=== \$1 ===\"; cat \"\$1\"; echo" _ {} \; 
 }
 
+# Just the tree structure (no contents)
+alias tree='find . -not -path "*/node_modules/*" -not -path "*/.git/*" -not -path "*/vendor/*" | sed "s|[^/]*/| |g"'
+
 # Codex
 # alias gemini='open-codex --provider gemini --model gemini-2.5-pro-exp-03-25 --approval-mode full-auto '
 alias grok='open-codex --provider xai --model grok-3 --endpoint https://api.x.ai/v1 --approval-mode full-auto '
