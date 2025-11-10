@@ -1,5 +1,8 @@
 alias newalias='vim ~/.bash_aliases; source ~/.bash_profile; savedotfiles>/dev/null; source ~/.bash_aliases'
 alias showalias="cat ~/.bash_aliases"
+alias supervisorEdit='vim ~/supervisord.ini'
+alias supervisorStart='supervisord -c ~/supervisord.ini'
+alias supervisorRestart='supervisord restart'
 
 alias mcpServe="uv run mcp dev "
 
