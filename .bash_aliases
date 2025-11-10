@@ -1,7 +1,7 @@
 alias newalias='vim ~/.bash_aliases; source ~/.bash_profile; savedotfiles>/dev/null; source ~/.bash_aliases'
 alias showalias="cat ~/.bash_aliases"
 alias supervisorEdit='vim ~/supervisord.ini'
-alias ami-monitor='supervisord -c ~/supervisord-dev.conf -n -k --childlogdir=/tmp --program=ami-monitor > /dev/null 2>&1 & tail -f /tmp/ami-monitor.log /tmp/ami-monitor.err'
+alias ami-monitor='supervisord -c ~/supervisord.ini -n -k --childlogdir=/Users/shawnpivonka/supervisor-logs --program=ami-monitor > /dev/null 2>&1 & tail -f /Users/shawnpivonka/supervisor-logs/ami-monitor.log /Users/shawnpivonka/supervisor-logs/ami-monitor.err'
 
 alias mcpServe="uv run mcp dev "
 
