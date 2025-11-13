@@ -59,7 +59,8 @@ alias master='git checkout master; fetch; pull; migrate'
 
 # Scaffold Generation Commands
 alias genidehelpers='php artisan ide-helper:models --env=testing'
-alias gen='php artisan akceli:generate --env=testing'
+alias genpanacea='panacea; php akceli-panacea-code-stanards/artisan akceli:generate --env=testing'
+alias gen='php artisan akceli:generate'
 alias sync='gen schema-sync --env=testing'
 alias model='gen schema-model --env=testing'
 
