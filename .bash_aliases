@@ -3,6 +3,8 @@ alias showalias="cat ~/.bash_aliases"
 alias supervisorEdit='vim ~/supervisord.ini'
 alias ami-monitor='supervisord -c ~/supervisord.ini -n -k --childlogdir=/Users/shawnpivonka/supervisor-logs --program=ami-monitor > /dev/null 2>&1 & tail -f /Users/shawnpivonka/supervisor-logs/ami-monitor.log /Users/shawnpivonka/supervisor-logs/ami-monitor.err'
 
+alias php82='/usr/local/Cellar/php@8.2/8.2.29/bin/php'
+
 alias mcpServe="uv run mcp dev "
 
 function catall() {
