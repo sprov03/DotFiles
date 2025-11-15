@@ -35,6 +35,7 @@ alias addlocalhost='function _addhost() { echo "127.0.0.1 $1" | sudo tee -a /etc
 alias development='cd ~/Development'
 alias sites='cd ~/Development/Sites'
 alias panacea='cd ~/Development/Sites/panacea'
+alias panaceaDir='~/Development/Sites/panacea'
 alias dotfiles='cd ~/DotFiles'
 
 #Ngrok Aliases
@@ -65,7 +66,7 @@ alias master='git checkout master; fetch; pull; migrate'
 
 # Scaffold Generation Commands
 alias genidehelpers='php82 artisan ide-helper:models --env=testing'
-alias genpanacea='panacea; php82 akceli-panacea-code-stanards/artisan akceli:generate --env=testing'
+alias genpanacea=' php82 panaceaDir/akceli-panacea-code-stanards/artisan akceli:generate --env=testing'
 alias gen='php82 artisan akceli:generate'
 alias sync='gen schema-sync --env=testing'
 alias model='gen schema-model --env=testing'
