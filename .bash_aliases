@@ -5,6 +5,7 @@ alias ami-monitor='supervisord -c ~/supervisord.ini -n -k --childlogdir=/Users/s
 
 alias php82='/usr/local/Cellar/php@8.2/8.2.29/bin/php'
 alias php83='/usr/local/Cellar/php@8.3/8.3.24/bin/php'
+alias php84='/Users/shawnpivonka/Library/Application Support/Herd/bin//php'
 
 alias mcpServe="uv run mcp dev "
 
