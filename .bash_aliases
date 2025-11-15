@@ -3,9 +3,11 @@ alias showalias="cat ~/.bash_aliases"
 alias supervisorEdit='vim ~/supervisord.ini'
 alias ami-monitor='supervisord -c ~/supervisord.ini -n -k --childlogdir=/Users/shawnpivonka/supervisor-logs --program=ami-monitor > /dev/null 2>&1 & tail -f /Users/shawnpivonka/supervisor-logs/ami-monitor.log /Users/shawnpivonka/supervisor-logs/ami-monitor.err'
 
+alias php81='/usr/local/Cellar/php@8.1/8.1.32_1/bin/php'
 alias php82='/usr/local/Cellar/php@8.2/8.2.29/bin/php'
 alias php83='/usr/local/Cellar/php@8.3/8.3.24/bin/php'
 alias php84='/Users/shawnpivonka/Library/Application Support/Herd/bin//php'
+
 
 alias mcpServe="uv run mcp dev "
 
@@ -62,9 +64,9 @@ alias master='git checkout master; fetch; pull; migrate'
 
 
 # Scaffold Generation Commands
-alias genidehelpers='php artisan ide-helper:models --env=testing'
-alias genpanacea='panacea; php akceli-panacea-code-stanards/artisan akceli:generate --env=testing'
-alias gen='php artisan akceli:generate'
+alias genidehelpers='php82 artisan ide-helper:models --env=testing'
+alias genpanacea='panacea; php82 akceli-panacea-code-stanards/artisan akceli:generate --env=testing'
+alias gen='php82 artisan akceli:generate'
 alias sync='gen schema-sync --env=testing'
 alias model='gen schema-model --env=testing'
 
