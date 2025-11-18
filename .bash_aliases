@@ -49,6 +49,7 @@ alias ngrokDroneStrike='ngrok http --url=pervasive-nakita-subrotund.ngrok-free.d
 alias ducks='du -cks * | sort -rn | head'
 
 # Repos
+alias panaceaResyncRepos='panacea; repo sync -j8 --prune'
 alias reposPanacea='panacea; repos core'
 alias reposSoldiers='panacea; repos soldiers'
 alias soldiers='panacea; repos soldiers'
