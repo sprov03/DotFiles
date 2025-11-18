@@ -48,6 +48,10 @@ alias ngrokDroneStrike='ngrok http --url=pervasive-nakita-subrotund.ngrok-free.d
 # Ducks  get file sizes
 alias ducks='du -cks * | sort -rn | head'
 
+# Repos
+alias reposPanacea='panacea; repos core'
+alias reposSoldiers='panacea; repos soldiers'
+
 # Git Aliases
 alias gs='git status -sb'
 alias pull='git pull'
@@ -156,4 +160,22 @@ function savedotfiles() {
 	commit saving changes to dot-files"
 	push
 	cd $CWD
+}
+
+repos() {
+    local group="$1"
+    shift
+    local cmd="$@"
+
+    # If no group given, default to all
+    [ -z "$group" ] && group="all"
+
+    echo "Running in group: $group"
+    echo "Command: $cmd"
+    echo
+
+    repo list --groups="$group" -p | awk '{print $1}' | while read dir; do
+        echo -e "\n\033[1;35m▶▶▶  $dir  ◀◀◀\033[0m"
+        (cd "$dir" && source ~/.bashrc && eval "$cmd")
+    done
 }
