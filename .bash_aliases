@@ -49,11 +49,11 @@ alias ngrokDroneStrike='ngrok http --url=pervasive-nakita-subrotund.ngrok-free.d
 alias ducks='du -cks * | sort -rn | head'
 
 # Repos
-alias panaceaResyncRepos='panacea; repo sync -j8 --prune --no-detach'
-alias reposPanacea='panacea; repos core'
-alias reposSoldiers='panacea; repos soldiers'
-alias soldiers='panacea; repos soldiers'
-alias dronestrike='panacea; repos dronestrike'
+alias panaceaResyncRepos='CWD=$(pwd); panacea; repo sync -j8; cd $CWD'
+alias reposPanacea='CWD=$(pwd); panacea; repos core; cd $CWD'
+alias reposSoldiers='CWD=$(pwd); panacea; repos soldiers; cd $CWD'
+alias soldiers='CWD=$(pwd); panacea; repos soldiers; cd $CWD'
+alias dronestrike='CWD=$(pwd); panacea; repos dronestrike; cd $CWD'
 
 # Git Aliases
 alias gs='git status -sb'
@@ -166,7 +166,6 @@ function savedotfiles() {
 
 repos() {
     CWD=$(pwd)
-    echo $CWD
     local group="$1"
     shift
     local cmd="$@"
