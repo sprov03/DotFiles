@@ -52,6 +52,7 @@ alias ducks='du -cks * | sort -rn | head'
 alias reposPanacea='panacea; repos core'
 alias reposSoldiers='panacea; repos soldiers'
 alias soldiers='panacea; repos soldiers'
+alias dronestrike='panacea; repos dronestrike'
 
 # Git Aliases
 alias gs='git status -sb'
