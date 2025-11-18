@@ -166,6 +166,7 @@ function savedotfiles() {
 }
 
 repos() {
+    CWD=$(pwd)
     local group="$1"
     shift
     local cmd="$@"
@@ -181,4 +182,5 @@ repos() {
         echo -e "\n\033[1;35m▶▶▶  $dir  ◀◀◀\033[0m"
         (cd "$dir" && source ~/.bashrc && eval "$cmd")
     done
+    cd $CWD
 }
