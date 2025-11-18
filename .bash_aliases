@@ -49,55 +49,55 @@ alias ngrokDroneStrike='ngrok http --url=pervasive-nakita-subrotund.ngrok-free.d
 alias ducks='du -cks * | sort -rn | head'
 
 # Repos
-alias panaceaResyncRepos='CWD=$(pwd); panacea; repo sync -j8; cd $CWD'
-alias reposPanacea='CWD=$(pwd); panacea; repos core; cd $CWD'
-alias reposSoldiers='CWD=$(pwd); panacea; repos soldiers; cd $CWD'
-alias soldiers='CWD=$(pwd); panacea; repos soldiers; cd $CWD'
-alias dronestrike='CWD=$(pwd); panacea; repos dronestrike; cd $CWD'
+alias panaceaResyncRepos='panacea; repo sync -j8'
+alias reposPanacea='panacea; repos core'
+alias repossoldiers='panacea; repos soldiers'
+alias soldiers='panacea; repos soldiers'
+alias dronestrike='panacea; repos dronestrike'
 
-# Git Aliases
+# git aliases
 alias gs='git status -sb'
 alias pull='git pull'
 alias push='git push'
-alias commit='git add -A; git commit -am "'
-alias log="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
-alias gitclear='git add -A; git stash'
+alias commit='git add -a; git commit -am "'
+alias log="git log --graph --pretty=format:'%cred%h%creset -%c(yellow)%d%creset %s %cgreen(%cr) %c(bold blue)<%an>%creset' --abbrev-commit"
+alias gitclear='git add -a; git stash'
 alias cleanorigin="git remote update origin --prune"
-alias cleanlocal='git branch | grep -v "master" | xargs git branch -D'
+alias cleanlocal='git branch | grep -v "master" | xargs git branch -d'
 alias cleangit='cleanorigin; cleanlocal'
 
 alias fetch='git fetch'
 alias master='git checkout master; fetch; pull; migrate'
 
 
-# Scaffold Generation Commands
+# scaffold generation commands
 alias genidehelpers='php82 artisan ide-helper:models --env=testing'
-alias genpanacea=' php82 ~/Development/Sites/panacea/akceli-panacea-code-stanards/artisan akceli:generate --env=testing'
+alias genpanacea=' php82 ~/development/sites/panacea/akceli-panacea-code-stanards/artisan akceli:generate --env=testing'
 alias gen='php82 artisan akceli:generate'
 alias sync='gen schema-sync --env=testing'
 alias model='gen schema-model --env=testing'
 
-# Akceli Commands
+# akceli commands
 alias updateakceli='composer clearcache; composer update; composer require akceli/laravel-code-generator dev-master; php artisan akceli:publish'
 alias publishakceli='php artisan akceli:publish'
 alias reinstallalkceli='gittrash; updateakceli; publishakceli;'
 alias updateakceli='composer remove akceli/laravel-code-generator; composer require akceli/laravel-code-generator dev-master'
 
-# Laravel Aliases
-#alias dumpTesting='composer clearcache; composer dump-autoload; php artisan cache:clear; php artisan view:clear'
-alias dumpTesting='composer clearcache; composer dump-autoload; php artisan cache:clear --env=testing; php artisan view:clear'
-alias dump='dumpTesting'
-#alias migrateTesting='php /Users/shawnpivonka/Development/Sites/panacea/pweb/artisan migrate --env=testing'
-alias migrateTesting='php artisan migrate --env=testing'
-alias migrate='migrateTesting'
-#alias seedTesting='php /Users/shawnpivonka/Development/Sites/panacea/pweb/artisan db:seed --env=testing'
-alias seedTesting='php artisan db:seed --env=testing'
-alias seed='seedTesting'
-#alias rollbackTesting='php /Users/shawnpivonka/Development/Sites/panacea/pweb/artisan migrate:rollback --env=testing'
-alias rollbackTesting='php artisan migrate:rollback --env=testing'
-alias rollback='rollbackTesting'
-alias cycleTesting='migrateTesting; rollbackTesting; migrateTesting'
-alias cycle='cycleTesting'
+# laravel aliases
+#alias dumptesting='composer clearcache; composer dump-autoload; php artisan cache:clear; php artisan view:clear'
+alias dumptesting='composer clearcache; composer dump-autoload; php artisan cache:clear --env=testing; php artisan view:clear'
+alias dump='dumptesting'
+#alias migratetesting='php /users/shawnpivonka/development/sites/panacea/pweb/artisan migrate --env=testing'
+alias migratetesting='php artisan migrate --env=testing'
+alias migrate='migratetesting'
+#alias seedtesting='php /users/shawnpivonka/development/sites/panacea/pweb/artisan db:seed --env=testing'
+alias seedtesting='php artisan db:seed --env=testing'
+alias seed='seedtesting'
+#alias rollbacktesting='php /users/shawnpivonka/development/sites/panacea/pweb/artisan migrate:rollback --env=testing'
+alias rollbacktesting='php artisan migrate:rollback --env=testing'
+alias rollback='rollbacktesting'
+alias cycletesting='migratetesting; rollbacktesting; migratetesting'
+alias cycle='cycletesting'
 alias queue='php artisan queue:listen --timeout=120'
 
 alias horizon='php artisan horizon'
