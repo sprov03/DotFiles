@@ -112,7 +112,6 @@ function route() {
         php artisan route:list | grep $1
 }
 
-
 function gittrash() {
 	branch=$(git branch | sed -n -e 's/^\* \(.*\)/\1/p')
 	git checkout -b trash-branch
@@ -167,6 +166,7 @@ function savedotfiles() {
 
 repos() {
     CWD=$(pwd)
+    echo $CWD
     local group="$1"
     shift
     local cmd="$@"
