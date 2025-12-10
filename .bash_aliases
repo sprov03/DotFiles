@@ -9,13 +9,13 @@ alias php83='/usr/local/Cellar/php@8.3/8.3.24/bin/php'
 alias php84='/Users/shawnpivonka/Library/Application Support/Herd/bin//php'
 
 
-moveAllTempMigrationsBackToPWeb() {
+moveAllMigrationsBackToPWeb() {
     if [ -z "$1" ]; then
         echo "Usage: findAllMigrations <table_name>"
         return 1
     fi
     
-    local files=$(grep -l "Schema::\(create\|table\)('$1'" database/temp-migrations/*.php)
+    local files=$(grep -l "Schema::\(create\|table\)('$1'" database/migrations/*.php)
     
     if [ -z "$files" ]; then
         echo "No migrations found for table: $1"
