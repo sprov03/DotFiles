@@ -86,7 +86,7 @@ alias updateakceli='composer remove akceli/laravel-code-generator; composer requ
 # laravel aliases
 #alias dumptesting='composer clearcache; composer dump-autoload; php artisan cache:clear; php artisan view:clear'
 alias dumptesting='composer clearcache; composer dump-autoload; php artisan cache:clear --env=testing; php artisan view:clear'
-alias dump='dumptesting'
+alias dump='composer clearcache; composer dump-autoload; php artisan cache:clear; php artisan view:clear'
 #alias migratetesting='php /users/shawnpivonka/development/sites/panacea/pweb/artisan migrate --env=testing'
 alias migratetesting='php artisan migrate --env=testing'
 alias migrate='migratetesting'
@@ -105,7 +105,7 @@ alias jobs='horizon'
 
 #alias refreshTesting='php /Users/shawnpivonka/Development/Sites/panacea/pweb/artisan migrate:fresh --env=testing; dumptesting'
 alias refreshTesting='php81 artisan migrate:fresh --env=testing --step --seed; dumptesting'
-alias refresh='refreshTesting'
+alias refresh='php81 artisan migrate:fresh --step --seed; dump'
 
 alias routes='php artisan route:list'
 function route() {
