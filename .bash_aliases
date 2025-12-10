@@ -8,7 +8,31 @@ alias php82='/usr/local/Cellar/php@8.2/8.2.29/bin/php'
 alias php83='/usr/local/Cellar/php@8.3/8.3.24/bin/php'
 alias php84='/Users/shawnpivonka/Library/Application Support/Herd/bin//php'
 
-findAllMigrations() {
+
+moveAllMigrations() {
+    if [ -z "$1" ]; then
+        echo "Usage: findAllMigrations <table_name>"
+        return 1
+    fi
+    
+    local files=$(grep -l "Schema::\(create\|table\)('$1'" database/migrations/*.php)
+    
+    if [ -z "$files" ]; then
+        echo "No migrations found for table: $1"
+        return 1
+    fi
+    
+    echo "Found migrations for '$1':"
+    echo "$files"
+    echo ""
+    echo "Moving to database/temp-migrations/..."
+    
+    echo "$files" | xargs -I {} mv {} database/temp-migrations/
+    
+    echo "Done!"
+}
+
+moveAllPWebMigrations() {
     if [ -z "$1" ]; then
         echo "Usage: findAllMigrations <table_name>"
         return 1
