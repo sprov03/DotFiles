@@ -26,7 +26,7 @@ findAllMigrations() {
     echo ""
     echo "Moving to database/migrations/..."
     
-    # echo "$files" | xargs -I {} mv {} database/migrations/
+    echo "$files" | xargs -I {} mv {} database/migrations/
     
     echo "Done!"
 }
