@@ -33,7 +33,7 @@ moveAllTempMigrationsBack() {
     echo "Done!"
 }
 
-moveAllMigrations() {
+moveAllMigrationsToTemp() {
     if [ -z "$1" ]; then
         echo "Usage: findAllMigrations <table_name>"
         return 1
@@ -56,7 +56,7 @@ moveAllMigrations() {
     echo "Done!"
 }
 
-moveAllPWebMigrations() {
+moveAllPWebMigrationsToMigrations() {
     if [ -z "$1" ]; then
         echo "Usage: findAllMigrations <table_name>"
         return 1
