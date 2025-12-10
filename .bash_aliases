@@ -79,6 +79,29 @@ moveAllMigrationsToTemp() {
     echo "Done!"
 }
 
+moveAllPWebMigrationsToPanaceaMigrations() {
+    if [ -z "$1" ]; then
+        echo "Usage: findAllMigrations <table_name>"
+        return 1
+    fi
+    
+    local files=$(grep -l "Schema::\(create\|table\)('$1'" database/pweb-migrations/*.php)
+    
+    if [ -z "$files" ]; then
+        echo "No migrations found for table: $1"
+        return 1
+    fi
+    
+    echo "Found migrations for '$1':"
+    echo "$files"
+    echo ""
+    echo "Moving to database/panacea-migrations/..."
+    
+    echo "$files" | xargs -I {} mv {} database/panacea-migrations/
+    
+    echo "Done!"
+}
+
 moveAllPWebMigrationsToMigrations() {
     if [ -z "$1" ]; then
         echo "Usage: findAllMigrations <table_name>"
