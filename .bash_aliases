@@ -221,7 +221,8 @@ alias horizon='php artisan horizon'
 alias jobs='horizon'
 
 #alias refreshTesting='php /Users/shawnpivonka/Development/Sites/panacea/pweb/artisan migrate:fresh --env=testing; dumptesting'
-alias refreshTesting='php81 artisan migrate:fresh --env=testing --step --seed; dumptesting'
+#alias refreshTesting='php81 artisan migrate:fresh --env=testing --step --seed; dumptesting'
+alias refreshTesting='php81 artisan db:wipe --database=dronestrike --env=testing && php81 artisan db:wipe --database=asterisk --env=testing && php81 artisan migrate:fresh --step --env=testing'
 alias refresh='php81 artisan db:wipe --database=dronestrike && php81 artisan db:wipe --database=asterisk && php81 artisan migrate:fresh --step --seed'
 
 alias routes='php artisan route:list'
